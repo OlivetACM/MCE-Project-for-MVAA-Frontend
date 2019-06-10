@@ -59,7 +59,9 @@
     </form>
 
     <script type="text/javascript">
-        my_function("{{data}}");
+        if ("{{data}}") {
+            my_function("{{data}}");
+        }
     </script>
 </body>
 </html>

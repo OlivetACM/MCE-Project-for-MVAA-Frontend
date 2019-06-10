@@ -24,15 +24,6 @@ from django.contrib import admin
 
 from home import views as home_views
 
-# from home.views import app
-
-# import threading
-#
-# t = threading.Thread(target=app.run(host="127.0.0.1", port=5000))
-# t.setDaemon(True)
-# t.start()
-
-
 admin.autodiscover()
 
 urlpatterns = [
