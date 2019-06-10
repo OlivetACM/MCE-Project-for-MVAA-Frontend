@@ -1,0 +1,65 @@
+<?php header("Access-Control-Allow-Origin: http://127.0.0.1:5001"); ?>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+
+{% csrf_token %}
+{% load static %}
+
+<head>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+    <title>My Home Page</title>
+    <script type="text/javascript">
+        function decode_html(html) {
+            var txt = document.createElement("textarea");
+            txt.innerHTML = html;
+            console.log(txt.innerHTML)
+            return txt.value;
+        }
+
+        function my_function(data) {
+            console.log(typeof data)
+            var clean_data = data.toString().replace(/'/g, '"')
+            var decoded_data = decode_html(clean_data)
+            var new_data = JSON.parse(decoded_data)
+            console.log(decoded_data)
+            document.write("Course Number: ", new_data[0]["CourseNumber"]);
+            document.write("<br>")
+            document.write("Course Name: ", new_data[0]["CourseName"]);
+            document.write("<br>")
+            document.write("Course Description: ", new_data[0]["CourseDescription"]);
+
+            document.write("<br>")
+            document.write("<br>")
+            document.write("<br>")
+
+
+            for(i = 0; i < 3; i++) {
+                document.write("Course Equivalence: ", new_data[i]["CourseEquivalenceNonOC"])
+                document.write("<br>")
+                document.write("Course Description: ", new_data[i]["CourseDescriptionNonOC"])
+                document.write("<br>")
+                document.write("Course Credits: ", new_data[i]["CourseCredit"])
+                document.write("<br>")
+                document.write("<br>")
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p>This is a test page to insert Joint Service Transcript/Air Force University course codes.</p>
+
+    <form action="submit" method="post">
+        {% csrf_token %}
+        <label>Enter JST/AU Course Code: </label>
+        <input id="id" type="text" name="course_code" value="">
+        <input type="submit" value="Enter">
+    </form>
+
+    <script type="text/javascript">
+        my_function("{{data}}");
+    </script>
+</body>
+</html>
