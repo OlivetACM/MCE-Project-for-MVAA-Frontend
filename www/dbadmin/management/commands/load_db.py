@@ -5,6 +5,9 @@ from django.core.management.base import BaseCommand
 class Command(BaseCommand):
 
     def handle(self, *args, **options):
+        # obj = None
+        # Course.objects = None
+        print(type(Course.objects))
         print("Loading Database")
         dbname = 'mce.sqlite3'
         conn = sqlite3.connect(dbname)
@@ -12,13 +15,13 @@ class Command(BaseCommand):
         curs.execute('select * from Course')
         for row in curs:
             obj = Course.objects.create(
-                CourseID = row[0],
-                CourseNumber = row[1],
-                CourseName = row[2],
-                CourseDescription = row[3],
-                CourseCredit = row[4],
-                CourseEquivalenceNonOC = row[5],
-                InstitutionID = row[6],
-                ReviewerID = row[7]
+                CourseID=row[0],
+                CourseNumber=row[1],
+                CourseName=row[2],
+                CourseDescription=row[3],
+                CourseCredit=row[4],
+                CourseEquivalenceNonOC=row[5],
+                InstitutionID=row[6],
+                ReviewerID=row[7]
             )
-            print(obj)
+            # print(obj)
