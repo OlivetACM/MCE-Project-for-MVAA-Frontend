@@ -24,6 +24,11 @@ from django.contrib import admin
 
 from home import views as home_views
 
+# from django.conf.urls import patterns, include
+# from dbadmin.admin import admin_site
+
+admin.site.site_header = 'Database Administration - Olivet Military Course Equivalency'
+admin.site.index_title = 'Olivet MCE Database'
 admin.autodiscover()
 
 urlpatterns = [
