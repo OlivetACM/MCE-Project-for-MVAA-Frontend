@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b35f908-c2e0-46f0-ab5b-ad4a40f04f36" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/home/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/www/home/form.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/template/index.html" afterDir="false" />
     </list>
@@ -16,16 +15,16 @@
     <session id="-184357850">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="93" />
-          <entry key="py" value="1234" />
+          <entry key="html" value="132" />
+          <entry key="py" value="1891" />
           <entry key="txt" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="93" />
+          <entry key="HTML" value="132" />
           <entry key="PLAIN_TEXT" value="10" />
-          <entry key="Python" value="1234" />
+          <entry key="Python" value="1891" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -67,12 +66,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/home/form.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="806">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="909">
+              <caret line="70" column="27" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1560357017021" expanded="true" signature="220:225" ph="..." />
-                <marker date="1560357017021" expanded="true" signature="398:403" ph="..." />
+                <marker date="1560359405626" expanded="true" signature="220:225" ph="..." />
+                <marker date="1560359405626" expanded="true" signature="398:403" ph="..." />
               </folding>
             </state>
           </provider>
@@ -81,8 +80,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/template/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="197" column="36" selection-start-line="197" selection-start-column="36" selection-end-line="197" selection-end-column="36" />
+            <state relative-caret-position="778">
+              <caret line="123" column="43" selection-start-line="123" selection-start-column="43" selection-end-line="123" selection-end-column="43" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -388,20 +387,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/home/form.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="909">
+          <caret line="70" column="27" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1560357017021" expanded="true" signature="220:225" ph="..." />
-            <marker date="1560357017021" expanded="true" signature="398:403" ph="..." />
+            <marker date="1560359405626" expanded="true" signature="220:225" ph="..." />
+            <marker date="1560359405626" expanded="true" signature="398:403" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/template/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="197" column="36" selection-start-line="197" selection-start-column="36" selection-end-line="197" selection-end-column="36" />
+        <state relative-caret-position="778">
+          <caret line="123" column="43" selection-start-line="123" selection-start-column="43" selection-end-line="123" selection-end-column="43" />
           <folding>
             <element signature="n#style#0;n#div#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

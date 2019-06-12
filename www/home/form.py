@@ -28,14 +28,15 @@ class CourseLookup:
             logging.error("Error occurred while getting equivalent courses: ", e)
             return ""
 
-    def get_oc_course_description(self, oc_course_code):
-        print(oc_course_code)
+    def get_oc_course_info(self, oc_course_code):
         try:
             self.cursor.execute(
                 '''
-                    SELECT CourseDescription FROM dbadmin_course WHERE CourseNumber = ?;
+                    SELECT * FROM dbadmin_course WHERE CourseNumber = ?;
                 ''', [oc_course_code])
-            return self.cursor.fetchall()
+
+            return str(self.cursor.fetchall())[2:-2].replace("'", "").split(', ')
+
         except sqlite3.Error as e:
             logging.error("Error occurred while getting OC course description: ", e)
             return ""
@@ -57,11 +58,17 @@ class CourseLookup:
                 dict_data["CourseDescription"] = str(split_data[4:-4])[1:-1].replace("', '", ", ").replace("'", "")
                 dict_data["CourseCredit"] = split_data[-4]
                 dict_data["CourseEquivalenceNonOC"] = split_data[-3]
-                dict_data["CourseDescriptionNonOC"] = str(self.get_oc_course_description(split_data[-3]))
+
+                oc_course_info = self.get_oc_course_info(split_data[-3])
+                print(oc_course_info)
+
+                dict_data["OCCourseName"] = oc_course_info[3]
+                dict_data["OCCourseDescription"] = oc_course_info[4]
                 dict_data["InstitutionID"] = split_data[-2]
                 dict_data["ReviewerID"] = split_data[-1]
                 list_data.append(dict_data)
 
+            print(list_data)
             return list_data
 
         except IndexError as e:
