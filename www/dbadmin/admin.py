@@ -10,8 +10,10 @@ from dbadmin.models import Course
 #     index_title = ugettext_lazy('Olivet MCE Database Administration')
 
 class CourseAdmin(admin.ModelAdmin):
-    list_display = ("CourseID", "CourseNumber", "CourseDescription", "CourseCredit", "CourseEquivalenceNonOC", "InstitutionID", "ReviewerID")
+    list_display = ("CourseID", "CourseNumber", "CourseName", "CourseDescription", "CourseCredit",
+                    "CourseEquivalenceNonOC", "InstitutionID", "ReviewerID")
     search_fields = ("CourseNumber",)
+
 
 # admin_site = MyAdminSite()
 admin.site.register(Course, CourseAdmin)
