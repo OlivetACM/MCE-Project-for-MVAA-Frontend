@@ -17,12 +17,12 @@ class CourseAdmin(admin.ModelAdmin):
 
 class OutcomeAdmin(admin.ModelAdmin):
     list_display = ("CourseNumber", "OutcomeDescription")
-    search_fields = ("CourseNumber", "OutcomeDescription")
+    search_fields = ("CourseNumber",)
 
 
 class ReviewerAdmin(admin.ModelAdmin):
-    list_display = ("ReviewerID", "ReviewerName", "ReviewerPhone", "ReviewerEmail", "ReviewerDepartment")
-    search_fields = ("ReviewerName", "ReviewerDepartment")
+    list_display = ("ReviewerName", "ReviewerPhone", "ReviewerEmail", "ReviewerDepartment")
+    search_fields = ("ReviewerName",)
 
 
 class InstitutionAdmin(admin.ModelAdmin):
