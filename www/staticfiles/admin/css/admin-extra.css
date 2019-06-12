@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    color: #333;
+    background: #000;
+}
+
+#header {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background: #990000;
+    color: #ffc;
+    overflow: hidden;
+}
