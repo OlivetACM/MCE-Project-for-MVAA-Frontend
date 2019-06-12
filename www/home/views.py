@@ -1,32 +1,22 @@
-from django.shortcuts import render
-from django.http import HttpResponseRedirect
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+
 from django.views.decorators.csrf import csrf_exempt
 
+from .form import CourseForm, CourseLookup
 
-import requests
-
-data = None
 
 @csrf_exempt
 def index(request):
-    global data
     if request.method == 'POST':
-        data = str(request.body.decode('utf-8'))
-        data = data[2: -1]
-    elif request.method == 'GET':
-        display_data = data
+        form = CourseForm(request.POST)
         data = ""
-        return render(request, 'index.html', context={"data": display_data})
+        if form.is_valid():
+            course_lookup = CourseLookup(form.cleaned_data['course_code'])
+            data = course_lookup.get_equivalent_courses()
 
-    return render(request, 'index.html', context={"data": ""})
+    else:
+        form = CourseForm()
+        data = ""
 
-
-def submit(request):
-    global data
-    data = ""
-    course_code = request.POST['course_code']
-    web_hook_url = "http://127.0.0.1:5001"
-
-    r = requests.post(web_hook_url, course_code)
-
-    return HttpResponseRedirect('/')
+    return render_to_response('index.html', {'form': form, 'data': data}, RequestContext(request))
