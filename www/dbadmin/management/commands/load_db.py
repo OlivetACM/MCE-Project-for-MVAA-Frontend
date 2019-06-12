@@ -1,5 +1,5 @@
 import sqlite3
-from dbadmin.models import Course
+from dbadmin.models import Course, Outcome, Reviewer
 from django.core.management.base import BaseCommand
 
 class Command(BaseCommand):
@@ -25,3 +25,19 @@ class Command(BaseCommand):
                 ReviewerID=row[7]
             )
             # print(obj)
+        curs.execute('select * from Outcome')
+        for row in curs:
+            obj2 = Outcome.objects.create(
+                OutcomeID=row[0],
+                OutcomeDescription=row[1],
+                CourseNumber=row[2]
+            )
+        curs.execute('select * from Reviewer')
+        for row in curs:
+            obj3 = Reviewer.objects.create(
+                ReviewerID=row[0],
+                ReviewerName=row[1],
+                ReviewerPhone=row[2],
+                ReviewerEmail=row[3],
+                ReviewerDepartment=row[4]
+            )
