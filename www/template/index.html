@@ -1,5 +1,3 @@
-<?php header("Access-Control-Allow-Origin: http://127.0.0.1:5001"); ?>
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="en">
 
@@ -51,7 +49,7 @@
 <body>
     <p>This is a test page to insert Joint Service Transcript/Air Force University course codes.</p>
 
-    <form action="submit" method="post">
+    <form action="." method="post">
         {% csrf_token %}
         <label>Enter JST/AU Course Code: </label>
         <input id="id" type="text" name="course_code" value="">

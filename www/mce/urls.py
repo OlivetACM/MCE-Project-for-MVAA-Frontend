@@ -29,7 +29,7 @@ admin.autodiscover()
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', home_views.index, name='home'),
-    url(r'^submit', home_views.submit),
+    # url(r'^submit', home_views.submit),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += staticfiles_urlpatterns()
