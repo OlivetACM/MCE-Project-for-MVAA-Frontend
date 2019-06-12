@@ -14,11 +14,9 @@ class Course(models.Model):
         (1, "Olivet"),
         (2, "KCC"),
         (3, "Military"),
-        (0, "Unknown"),
     )
     InstitutionID = models.IntegerField(
         choices=INSTITUTION_CHOICES,
-        default=0
     )
     ReviewerID = models.IntegerField(null=True, blank=True)
 
@@ -35,3 +33,13 @@ class Reviewer(models.Model):
     ReviewerPhone = models.CharField(max_length=16)
     ReviewerEmail = models.CharField(max_length=128)
     ReviewerDepartment = models.CharField(max_length=8)
+
+
+class Institution(models.Model):
+    InstitutionID = models.IntegerField()
+    InstitutionName = models.CharField(max_length=128)
+    InstitutionAddress = models.CharField(max_length=256)
+    InstitutionCity = models.CharField(max_length=128)
+    InstitutionState = models.CharField(max_length=32)
+    InstitutionZipcode = models.CharField(max_length=16)
+    InstitutionWebSite = models.CharField(max_length=256)
