@@ -29,10 +29,11 @@ class CourseLookup:
             return ""
 
     def get_oc_course_description(self, oc_course_code):
+        print(oc_course_code)
         try:
             self.cursor.execute(
                 '''
-                    SELECT CourseDescription FROM dbadmin_course WHERE CourseNumber = ?
+                    SELECT CourseDescription FROM dbadmin_course WHERE CourseNumber = ?;
                 ''', [oc_course_code])
             return self.cursor.fetchall()
         except sqlite3.Error as e:
@@ -43,21 +44,22 @@ class CourseLookup:
         try:
             data_set = str(data_set)[1:-1].split('), (')
             list_data = []
-            print(data_set)
 
             for data in data_set:
                 dict_data = {}
                 new_data = data.replace('(', '').replace(')', "").replace("'", "")
                 split_data = new_data.split(', ')
 
-                dict_data["CourseID"] = split_data[0]
-                dict_data["CourseNumber"] = split_data[1]
-                dict_data["CourseName"] = split_data[2]
-                dict_data["CourseDescription"] = str(split_data[3:-4])[1:-1].replace("', '", ", ").replace("'", "")
-                dict_data["CourseCredit"] = split_data[-3]
-                dict_data["CourseEquivalenceNonOC"] = split_data[-2]
-                dict_data["CourseDescriptionNonOC"] = str(self.get_oc_course_description(split_data[-2]))[3:-4]
-                dict_data["InstitutionID"] = split_data[-1]
+                dict_data["ID"] = split_data[0]
+                dict_data["CourseID"] = split_data[1]
+                dict_data["CourseNumber"] = split_data[2]
+                dict_data["CourseName"] = split_data[3]
+                dict_data["CourseDescription"] = str(split_data[4:-4])[1:-1].replace("', '", ", ").replace("'", "")
+                dict_data["CourseCredit"] = split_data[-4]
+                dict_data["CourseEquivalenceNonOC"] = split_data[-3]
+                dict_data["CourseDescriptionNonOC"] = str(self.get_oc_course_description(split_data[-3]))
+                dict_data["InstitutionID"] = split_data[-2]
+                dict_data["ReviewerID"] = split_data[-1]
                 list_data.append(dict_data)
 
             return list_data
