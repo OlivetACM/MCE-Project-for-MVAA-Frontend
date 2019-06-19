@@ -1,7 +1,7 @@
 import logging
-import sqlite3
-
 from django import forms
+from dbadmin.models import Course
+
 from dbadmin.models import Course
 
 logging.basicConfig(filename='mce.log', level=logging.ERROR)
@@ -25,70 +25,52 @@ class CourseCodes(object):
    information on ChoicField()
 """
 class CourseForm(forms.Form):
+<<<<<<< HEAD
     course_code_choices = CourseCodes()
     course_code = forms.ChoiceField(choices=course_code_choices, label="", initial='', widget=forms.CheckboxSelectMultiple(), required=True)
+=======
+    course_code = forms.CharField(max_length=30)
+>>>>>>> 195afa6976fc6a8ca5c1a99f0c81824201eeaa34
 
 
 class CourseLookup:
-    def __init__(self, course):
-        self.course = course
-        self.conn = sqlite3.connect('db.sqlite3', check_same_thread=False)
-        self.cursor = self.conn.cursor()
+    def __init__(self):
+        pass
 
-    def get_equivalent_courses(self):
+    def get_equivalent_courses(self, requested_courses):
+        database_result = []
+        requested_courses = requested_courses.split(" ")   # NEEDS TO CHANGE AS LIST WILL BE `requested_courses`
+        print(requested_courses)
+        for course in requested_courses:
+            database_result.append(self.search_database(course))
+
+        print(database_result)
+        return database_result
+
+    def search_database(self, course_number):
+        database_data = Course.objects.filter(CourseNumber=course_number, CourseEquivalenceNonOC__isnull=False)
+        return self.format_results(database_data)
+
+    def format_results(self, database_data):
         try:
-            self.cursor.execute(
-                '''
-                    SELECT * FROM dbadmin_course WHERE CourseNumber = ? and CourseEquivalenceNonOC not NULL;
-                ''', [self.course])
-            results = self.cursor.fetchall()
-            return str(self.format_results(results)).replace("'", '"')
-        except sqlite3.Error as e:
-            logging.error("Error occurred while getting equivalent courses: ", e)
-            return ""
+            formatted_courses = {}
+            combined_courses = []
+            for course in database_data:
+                formatted_courses["CourseID"] = course.CourseID
+                formatted_courses["CourseNumber"] = course.CourseNumber
+                formatted_courses["CourseName"] = course.CourseName
+                formatted_courses["CourseDescription"] = course.CourseDescription
+                formatted_courses["CourseCredit"] = course.CourseCredit
 
-    def get_oc_course_info(self, oc_course_code):
-        try:
-            self.cursor.execute(
-                '''
-                    SELECT * FROM dbadmin_course WHERE CourseNumber = ?;
-                ''', [oc_course_code])
+                course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+                formatted_courses["CourseEquivalenceNonOC"] = course.CourseEquivalenceNonOC
+                formatted_courses["OCCourseName"] = course_equivalence_non_oc_data.CourseName
+                formatted_courses["OCCourseDescription"] = course_equivalence_non_oc_data.CourseDescription
 
-            return str(self.cursor.fetchall())[2:-2].replace("'", "").split(', ')
-
-        except sqlite3.Error as e:
-            logging.error("Error occurred while getting OC course description: ", e)
-            return ""
-
-    def format_results(self, data_set):
-        try:
-            data_set = str(data_set)[1:-1].split('), (')
-            list_data = []
-
-            for data in data_set:
-                dict_data = {}
-                new_data = data.replace('(', '').replace(')', "").replace("'", "")
-                split_data = new_data.split(', ')
-
-                dict_data["ID"] = split_data[0]
-                dict_data["CourseID"] = split_data[1]
-                dict_data["CourseNumber"] = split_data[2]
-                dict_data["CourseName"] = split_data[3]
-                dict_data["CourseDescription"] = str(split_data[4:-4])[1:-1].replace("', '", ", ").replace("'", "")
-                dict_data["CourseCredit"] = split_data[-4]
-                dict_data["CourseEquivalenceNonOC"] = split_data[-3]
-
-                oc_course_info = self.get_oc_course_info(split_data[-3])
-                print(oc_course_info)
-
-                dict_data["OCCourseName"] = oc_course_info[3]
-                dict_data["OCCourseDescription"] = oc_course_info[4]
-                dict_data["InstitutionID"] = split_data[-2]
-                dict_data["ReviewerID"] = split_data[-1]
-                list_data.append(dict_data)
-
-            print(list_data)
-            return list_data
+                formatted_courses["InstitutionID"] = course.InstitutionID
+                formatted_courses["ReviewerID"] = course.ReviewerID
+                combined_courses.append(formatted_courses)
+            return combined_courses
 
         except IndexError as e:
             logging.error("Course was not found: ", e)

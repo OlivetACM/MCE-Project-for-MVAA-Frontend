@@ -19,6 +19,12 @@
     <link rel="stylesheet" id="c_et-gf-lato-css" href="https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic&amp;subset=latin" type="text/css" media="all" class="cr" />
     <link rel="stylesheet" id="c_evcal_google_fonts-css" href="https://fonts.googleapis.com/css?family=Oswald%3A400%2C300%7COpen+Sans%3A400%2C400i%2C300&amp;ver=4.7.2" type="text/css" media="screen" class="cr" />
     <script src="https://fw.cdn.technolutions.net/framework/base.js?v=20190522-6"></script>
+
+    <!--MCE Scripts-->
+    <script src="{% static "/home/home.js" %}"></script>
+    <script src="{% static "/home/jquery-1.9.1.js" %}"></script>
+
+
     <script>
         /*<![CDATA[*/
         FW.Config['firstDay'] = 0; /*]]>*/
@@ -85,52 +91,6 @@
         /*]]>*/
     </style>
 
-
-
-
-
-
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-
-    <title>My Home Page</title>
-    <script type="text/javascript">
-        function decode_html(html) {
-            var txt = document.createElement("textarea");
-            txt.innerHTML = html;
-            console.log(txt.innerHTML)
-            return txt.value;
-        }
-
-        function my_function(data) {
-            console.log(typeof data)
-            var clean_data = data.toString().replace(/'/g, '"')
-            var decoded_data = decode_html(clean_data)
-            var new_data = JSON.parse(decoded_data)
-            console.log(decoded_data)
-            document.write("Course Number: ", new_data[0]["CourseNumber"]);
-            document.write("<br>")
-            document.write("Course Name: ", new_data[0]["CourseName"]);
-            document.write("<br>")
-            document.write("Course Description: ", new_data[0]["CourseDescription"]);
-
-            document.write("<br>")
-            document.write("<br>")
-            document.write("<br>")
-
-
-            for(i = 0; i < 3; i++) {
-                document.write("Course Equivalence: ", new_data[i]["CourseEquivalenceNonOC"])
-                document.write("<br>")
-                document.write("Course Name: ", new_data[i]["OCCourseName"])
-                document.write("<br>")
-                document.write("Course Description: ", new_data[i]["OCCourseDescription"])
-                document.write("<br>")
-                document.write("Course Credits: ", new_data[i]["CourseCredit"])
-                document.write("<br>")
-                document.write("<br>")
-            }
-        }
-    </script>
 </head>
 
 <body>
@@ -193,8 +153,13 @@
 
                                 <form action="." method="post">
                                     <label>Enter JST/AU Course Code: </label>
+<<<<<<< HEAD
                                     {{ form.as_table }}
                                     <input type="submit" value="Enter">
+=======
+                                    <input id="course_code" type="text" name="course_code" value="">
+                                    <input type="submit" value="Enter" onClick="return empty()" />
+>>>>>>> 195afa6976fc6a8ca5c1a99f0c81824201eeaa34
                                 </form>
 
                                 <br>
