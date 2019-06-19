@@ -2,8 +2,6 @@ import logging
 from django import forms
 from dbadmin.models import Course
 
-from dbadmin.models import Course
-
 logging.basicConfig(filename='mce.log', level=logging.ERROR)
 
 """CourseCodes is used to generate a query of Course objects where they have a 
@@ -25,13 +23,8 @@ class CourseCodes(object):
    information on ChoicField()
 """
 class CourseForm(forms.Form):
-<<<<<<< HEAD
     course_code_choices = CourseCodes()
-    course_code = forms.ChoiceField(choices=course_code_choices, label="", initial='', widget=forms.CheckboxSelectMultiple(), required=True)
-=======
-    course_code = forms.CharField(max_length=30)
->>>>>>> 195afa6976fc6a8ca5c1a99f0c81824201eeaa34
-
+    course_code = forms.MultipleChoiceField(choices=course_code_choices, label="", initial='', widget=forms.CheckboxSelectMultiple(), required=True)#MultipleChoiceField() works the best with Checkboxselectmultiple()
 
 class CourseLookup:
     def __init__(self):
@@ -39,7 +32,7 @@ class CourseLookup:
 
     def get_equivalent_courses(self, requested_courses):
         database_result = []
-        requested_courses = requested_courses.split(" ")   # NEEDS TO CHANGE AS LIST WILL BE `requested_courses`
+        #requested_courses = requested_courses.split(" ")   # NEEDS TO CHANGE AS LIST WILL BE `requested_courses`
         print(requested_courses)
         for course in requested_courses:
             database_result.append(self.search_database(course))
