@@ -11,12 +11,18 @@ def index(request):
     if request.method == 'POST':
         form = CourseForm(request.POST)
         data = ""
+        response = None
         if form.is_valid():
-            course_lookup = CourseLookup(form.cleaned_data['course_code'])
-            data = course_lookup.get_equivalent_courses()
+            course_code = form.cleaned_data['course_code']
+            if course_code == "":
+                response = "No course added"
+            else:
+                course_lookup = CourseLookup()
+                data = course_lookup.get_equivalent_courses(course_code)
 
     else:
         form = CourseForm()
         data = ""
+        response = ""
 
-    return render_to_response('index.html', {'form': form, 'data': data}, RequestContext(request))
+    return render_to_response('index.html', {'form': form, 'data': data, 'response': response}, RequestContext(request))
