@@ -1,0 +1,1030 @@
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 23, in index
+    return render_to_response('index.html', {'form': form, 'data': data}, RequestContext(request))
+UnboundLocalError: local variable 'form' referenced before assignment
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 24, in index
+    return render_to_response('index.html', {'form': form, 'data': data}, RequestContext(request))
+NameError: name 'form' is not defined
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 25, in index
+    return render_to_response('index.html', {'form': form, 'data': data}, RequestContext(request))
+NameError: name 'data' is not defined
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 25, in index
+    return render_to_response('index.html', {'form': form, 'data': data}, RequestContext(request))
+NameError: name 'data' is not defined
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 25, in index
+    return render_to_response('index.html', {'form': form, 'data': data}, RequestContext(request))
+NameError: name 'data' is not defined
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 27, in index
+    return render_to_response('index.html', form, RequestContext(request))
+  File "/usr/local/lib/python3.7/site-packages/django/shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.7/site-packages/django/template/backends/django.py", line 59, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "/usr/local/lib/python3.7/site-packages/django/template/context.py", line 270, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than CourseForm.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 27, in index
+    return render_to_response('index.html', 'form', RequestContext(request))
+  File "/usr/local/lib/python3.7/site-packages/django/shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.7/site-packages/django/template/backends/django.py", line 59, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "/usr/local/lib/python3.7/site-packages/django/template/context.py", line 270, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than str.
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 27, in index
+    return render_to_response('index.html', 'form', RequestContext(request))
+  File "/usr/local/lib/python3.7/site-packages/django/shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.7/site-packages/django/template/backends/django.py", line 59, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "/usr/local/lib/python3.7/site-packages/django/template/context.py", line 270, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than str.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 27, in index
+    return render_to_response('index.html', {'form' : form}, RequestContext(request))
+  File "/usr/local/lib/python3.7/site-packages/django/shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 987, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 858, in _resolve_lookup
+    current = current()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 284, in as_table
+    errors_on_separate_row=False,
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 243, in _html_output
+    'field_name': bf.html_name,
+  File "/usr/local/lib/python3.7/site-packages/django/utils/html.py", line 388, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 33, in __str__
+    return self.as_widget()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 86, in as_widget
+    attrs = self.build_widget_attrs(attrs, widget)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 221, in build_widget_attrs
+    if widget.use_required_attribute(self.initial) and self.field.required and self.form.use_required_attribute:
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 702, in use_required_attribute
+    return use_required_attribute and first_choice is not None and self._choice_has_empty_value(first_choice)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 688, in _choice_has_empty_value
+    value, _ = choice
+ValueError: too many values to unpack (expected 2)
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 27, in index
+    return render_to_response('index.html', {'form' : form}, RequestContext(request))
+  File "/usr/local/lib/python3.7/site-packages/django/shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 987, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 858, in _resolve_lookup
+    current = current()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 284, in as_table
+    errors_on_separate_row=False,
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 243, in _html_output
+    'field_name': bf.html_name,
+  File "/usr/local/lib/python3.7/site-packages/django/utils/html.py", line 388, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 33, in __str__
+    return self.as_widget()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 86, in as_widget
+    attrs = self.build_widget_attrs(attrs, widget)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 221, in build_widget_attrs
+    if widget.use_required_attribute(self.initial) and self.field.required and self.form.use_required_attribute:
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 702, in use_required_attribute
+    return use_required_attribute and first_choice is not None and self._choice_has_empty_value(first_choice)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 688, in _choice_has_empty_value
+    value, _ = choice
+ValueError: too many values to unpack (expected 2)
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 26, in index
+    return render_to_response('index.html', {'form': form, 'data': data}, RequestContext(request))
+  File "/usr/local/lib/python3.7/site-packages/django/shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 987, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 858, in _resolve_lookup
+    current = current()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 284, in as_table
+    errors_on_separate_row=False,
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 243, in _html_output
+    'field_name': bf.html_name,
+  File "/usr/local/lib/python3.7/site-packages/django/utils/html.py", line 388, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 33, in __str__
+    return self.as_widget()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 86, in as_widget
+    attrs = self.build_widget_attrs(attrs, widget)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 221, in build_widget_attrs
+    if widget.use_required_attribute(self.initial) and self.field.required and self.form.use_required_attribute:
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 702, in use_required_attribute
+    return use_required_attribute and first_choice is not None and self._choice_has_empty_value(first_choice)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 688, in _choice_has_empty_value
+    value, _ = choice
+ValueError: too many values to unpack (expected 2)
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 26, in index
+    return render_to_response('index.html', {'form': form, 'data': data}, RequestContext(request))
+  File "/usr/local/lib/python3.7/site-packages/django/shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 987, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 858, in _resolve_lookup
+    current = current()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 284, in as_table
+    errors_on_separate_row=False,
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 243, in _html_output
+    'field_name': bf.html_name,
+  File "/usr/local/lib/python3.7/site-packages/django/utils/html.py", line 388, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 33, in __str__
+    return self.as_widget()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 86, in as_widget
+    attrs = self.build_widget_attrs(attrs, widget)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 221, in build_widget_attrs
+    if widget.use_required_attribute(self.initial) and self.field.required and self.form.use_required_attribute:
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 702, in use_required_attribute
+    return use_required_attribute and first_choice is not None and self._choice_has_empty_value(first_choice)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 688, in _choice_has_empty_value
+    value, _ = choice
+ValueError: too many values to unpack (expected 2)
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/mce/urls.py changed, reloading.
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 26, in index
+    return render_to_response('index.html', {'form': form, 'data': data}, RequestContext(request))
+  File "/usr/local/lib/python3.7/site-packages/django/shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 993, in render
+    return render_value_in_context(output, context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 972, in render_value_in_context
+    value = str(value)
+  File "/usr/local/lib/python3.7/site-packages/django/utils/html.py", line 388, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 142, in __str__
+    return self.as_table()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 284, in as_table
+    errors_on_separate_row=False,
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 243, in _html_output
+    'field_name': bf.html_name,
+  File "/usr/local/lib/python3.7/site-packages/django/utils/html.py", line 388, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 33, in __str__
+    return self.as_widget()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 86, in as_widget
+    attrs = self.build_widget_attrs(attrs, widget)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 221, in build_widget_attrs
+    if widget.use_required_attribute(self.initial) and self.field.required and self.form.use_required_attribute:
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 702, in use_required_attribute
+    return use_required_attribute and first_choice is not None and self._choice_has_empty_value(first_choice)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 688, in _choice_has_empty_value
+    value, _ = choice
+ValueError: too many values to unpack (expected 2)
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 26, in index
+    return render_to_response('index.html', {'form': form, 'data': data}, RequestContext(request))
+  File "/usr/local/lib/python3.7/site-packages/django/shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 993, in render
+    return render_value_in_context(output, context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 972, in render_value_in_context
+    value = str(value)
+  File "/usr/local/lib/python3.7/site-packages/django/utils/html.py", line 388, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 33, in __str__
+    return self.as_widget()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 86, in as_widget
+    attrs = self.build_widget_attrs(attrs, widget)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 221, in build_widget_attrs
+    if widget.use_required_attribute(self.initial) and self.field.required and self.form.use_required_attribute:
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 702, in use_required_attribute
+    return use_required_attribute and first_choice is not None and self._choice_has_empty_value(first_choice)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 688, in _choice_has_empty_value
+    value, _ = choice
+ValueError: too many values to unpack (expected 2)
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 23, in index
+    print("form is: ", form)
+  File "/usr/local/lib/python3.7/site-packages/django/utils/html.py", line 388, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 142, in __str__
+    return self.as_table()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 284, in as_table
+    errors_on_separate_row=False,
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 243, in _html_output
+    'field_name': bf.html_name,
+  File "/usr/local/lib/python3.7/site-packages/django/utils/html.py", line 388, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 33, in __str__
+    return self.as_widget()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 86, in as_widget
+    attrs = self.build_widget_attrs(attrs, widget)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 221, in build_widget_attrs
+    if widget.use_required_attribute(self.initial) and self.field.required and self.form.use_required_attribute:
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 702, in use_required_attribute
+    return use_required_attribute and first_choice is not None and self._choice_has_empty_value(first_choice)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 688, in _choice_has_empty_value
+    value, _ = choice
+ValueError: too many values to unpack (expected 2)
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 23, in index
+    print("form is: ", form)
+  File "/usr/local/lib/python3.7/site-packages/django/utils/html.py", line 388, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 142, in __str__
+    return self.as_table()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 284, in as_table
+    errors_on_separate_row=False,
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 243, in _html_output
+    'field_name': bf.html_name,
+  File "/usr/local/lib/python3.7/site-packages/django/utils/html.py", line 388, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 33, in __str__
+    return self.as_widget()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 86, in as_widget
+    attrs = self.build_widget_attrs(attrs, widget)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 221, in build_widget_attrs
+    if widget.use_required_attribute(self.initial) and self.field.required and self.form.use_required_attribute:
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 702, in use_required_attribute
+    return use_required_attribute and first_choice is not None and self._choice_has_empty_value(first_choice)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 688, in _choice_has_empty_value
+    value, _ = choice
+ValueError: too many values to unpack (expected 2)
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 25, in index
+    return render_to_response('index.html', {'form': form, 'data': data}, RequestContext(request))
+  File "/usr/local/lib/python3.7/site-packages/django/shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 987, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 858, in _resolve_lookup
+    current = current()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 304, in as_p
+    errors_on_separate_row=True,
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 243, in _html_output
+    'field_name': bf.html_name,
+  File "/usr/local/lib/python3.7/site-packages/django/utils/html.py", line 388, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 33, in __str__
+    return self.as_widget()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 86, in as_widget
+    attrs = self.build_widget_attrs(attrs, widget)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 221, in build_widget_attrs
+    if widget.use_required_attribute(self.initial) and self.field.required and self.form.use_required_attribute:
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 702, in use_required_attribute
+    return use_required_attribute and first_choice is not None and self._choice_has_empty_value(first_choice)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 688, in _choice_has_empty_value
+    value, _ = choice
+ValueError: too many values to unpack (expected 2)
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 25, in index
+    return render_to_response('index.html', {'form': form, 'data': data}, RequestContext(request))
+  File "/usr/local/lib/python3.7/site-packages/django/shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 987, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 858, in _resolve_lookup
+    current = current()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 304, in as_p
+    errors_on_separate_row=True,
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 243, in _html_output
+    'field_name': bf.html_name,
+  File "/usr/local/lib/python3.7/site-packages/django/utils/html.py", line 388, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 33, in __str__
+    return self.as_widget()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 86, in as_widget
+    attrs = self.build_widget_attrs(attrs, widget)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 221, in build_widget_attrs
+    if widget.use_required_attribute(self.initial) and self.field.required and self.form.use_required_attribute:
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 702, in use_required_attribute
+    return use_required_attribute and first_choice is not None and self._choice_has_empty_value(first_choice)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 688, in _choice_has_empty_value
+    value, _ = choice
+ValueError: too many values to unpack (expected 2)
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 25, in index
+    return render_to_response('index.html', {'form': form, 'data': data}, RequestContext(request))
+  File "/usr/local/lib/python3.7/site-packages/django/shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 987, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 858, in _resolve_lookup
+    current = current()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 304, in as_p
+    errors_on_separate_row=True,
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 243, in _html_output
+    'field_name': bf.html_name,
+  File "/usr/local/lib/python3.7/site-packages/django/utils/html.py", line 388, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 33, in __str__
+    return self.as_widget()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 86, in as_widget
+    attrs = self.build_widget_attrs(attrs, widget)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 221, in build_widget_attrs
+    if widget.use_required_attribute(self.initial) and self.field.required and self.form.use_required_attribute:
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 702, in use_required_attribute
+    return use_required_attribute and first_choice is not None and self._choice_has_empty_value(first_choice)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 688, in _choice_has_empty_value
+    value, _ = choice
+ValueError: too many values to unpack (expected 2)
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 25, in index
+    return render_to_response('index.html', {'form': form, 'data': data}, RequestContext(request))
+  File "/usr/local/lib/python3.7/site-packages/django/shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python3.7/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 987, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 858, in _resolve_lookup
+    current = current()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 304, in as_p
+    errors_on_separate_row=True,
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 243, in _html_output
+    'field_name': bf.html_name,
+  File "/usr/local/lib/python3.7/site-packages/django/utils/html.py", line 388, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 33, in __str__
+    return self.as_widget()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 86, in as_widget
+    attrs = self.build_widget_attrs(attrs, widget)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/boundfield.py", line 221, in build_widget_attrs
+    if widget.use_required_attribute(self.initial) and self.field.required and self.form.use_required_attribute:
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 702, in use_required_attribute
+    return use_required_attribute and first_choice is not None and self._choice_has_empty_value(first_choice)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/widgets.py", line 688, in _choice_has_empty_value
+    value, _ = choice
+ValueError: too many values to unpack (expected 2)
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 22, in index
+    print("seeing what this does", form = CourseForm())
+TypeError: 'form' is an invalid keyword argument for print()
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 15, in index
+    course_lookup = CourseLookup(form.cleaned_data['course_code'])
+KeyError: 'course_code'
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 15, in index
+    course_lookup = CourseLookup(form.cleaned_data['course_code'])
+KeyError: 'course_code'
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 15, in index
+    course_lookup = CourseLookup(form.cleaned_data['course_code'])
+KeyError: 'course_code'
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 15, in index
+    course_lookup = CourseLookup(form.cleaned_data['course_code'])
+KeyError: 'course_code'
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 15, in index
+    course_lookup = CourseLookup(form.cleaned_data['course_code'])
+KeyError: 'course_code'
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 15, in index
+    course_lookup = CourseLookup(form.cleaned_data['course_code'])
+KeyError: 'course_code'
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 14, in index
+    if form.is_valid():
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 185, in is_valid
+    return self.is_bound and not self.errors
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 180, in errors
+    self.full_clean()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 381, in full_clean
+    self._clean_fields()
+  File "/usr/local/lib/python3.7/site-packages/django/forms/forms.py", line 399, in _clean_fields
+    value = field.clean(value)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/fields.py", line 149, in clean
+    self.validate(value)
+  File "/usr/local/lib/python3.7/site-packages/django/forms/fields.py", line 799, in validate
+    if value and not self.valid_value(value):
+  File "/usr/local/lib/python3.7/site-packages/django/forms/fields.py", line 809, in valid_value
+    for k, v in self.choices:
+ValueError: too many values to unpack (expected 2)
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.

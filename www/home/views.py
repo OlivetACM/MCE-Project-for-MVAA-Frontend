@@ -8,6 +8,7 @@ from .form import CourseForm, CourseLookup
 
 @csrf_exempt
 def index(request):
+    print("request recieved")
     if request.method == 'POST':
         form = CourseForm(request.POST)
         data = ""

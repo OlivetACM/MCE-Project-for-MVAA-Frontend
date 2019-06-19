@@ -2,12 +2,31 @@ import logging
 import sqlite3
 
 from django import forms
+from dbadmin.models import Course
 
 logging.basicConfig(filename='mce.log', level=logging.ERROR)
 
+"""CourseCodes is used to generate a query of Course objects where they have a 
+   equivalant Olivet course. It then creats a set and then fills it with touples
+   of Course numbers that then gets returned in the iter function
+"""
+class CourseCodes(object):
+    def __init__(self):
+        self.query = Course.objects.filter(CourseEquivalenceNonOC__isnull=False,)
+        self.course_numbers = set()
+        for i in self.query:
+            self.course_numbers.add((i.CourseNumber, i.CourseNumber))
+    def __iter__(self):
+        return iter(self.course_numbers)
 
+"""CourseForm sets up the container that will be displayed in the html by {{form}}
+   ChoiceFields is the form template being used currently that sets up a list drop 
+   down filled with choices provided by CoursCodes. Check django docs for more 
+   information on ChoicField()
+"""
 class CourseForm(forms.Form):
-    course_code = forms.CharField(max_length=20)
+    course_code_choices = CourseCodes()
+    course_code = forms.ChoiceField(choices=course_code_choices, label="", initial='', widget=forms.CheckboxSelectMultiple(), required=True)
 
 
 class CourseLookup:
