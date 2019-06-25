@@ -1,14 +1,9 @@
-# from django.contrib import AdminSite
-# from django.utils.translation import ugettext_lazy
 from django.contrib import admin
 from dbadmin.models import Course, Outcome, Reviewer, Institution
 
 
-# class MyAdminSite(AdminSite):
-#     site_title = ugettext_lazy('Olivet MCE Database Administration')
-#     site_header = ugettext_lazy('Olivet MCE Administration')
-#     index_title = ugettext_lazy('Olivet MCE Database Administration')
-
+# list_display = what we want shown in the admin site
+# search_fields = what we want to search by, seems to do all at once
 class CourseAdmin(admin.ModelAdmin):
     list_display = ("CourseNumber", "CourseName", "CourseDescription", "CourseCredit",
                     "CourseEquivalenceNonOC", "InstitutionID", "ReviewerID")
