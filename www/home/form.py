@@ -16,10 +16,13 @@ class CourseLookup:
 
     def get_equivalent_courses(self, requested_courses):
         database_result = []
-        requested_courses = requested_courses.split(" ")   # NEEDS TO CHANGE AS LIST WILL BE `requested_courses`
+        # requested_courses = requested_courses.split(" ")   # NEEDS TO CHANGE AS LIST WILL BE `requested_courses`
         for course in requested_courses:
-            database_result.append(self.search_database(course))
+            data = self.search_database(course)
+            if data:
+                database_result.append(data)
 
+        print(database_result)
         return database_result
 
     def search_database(self, course_number):
@@ -28,6 +31,7 @@ class CourseLookup:
 
     def format_results(self, database_data):
         try:
+            print(database_data)
             combined_courses = []
             for course in database_data:
                 formatted_courses = {}
@@ -45,6 +49,7 @@ class CourseLookup:
                 formatted_courses["InstitutionID"] = course.InstitutionID
                 formatted_courses["ReviewerID"] = course.ReviewerID
                 combined_courses.append(formatted_courses)
+            print(combined_courses)
             return combined_courses
 
         except IndexError as e:
