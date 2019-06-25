@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 
 
+# Models made from fields in the mce.sqlite3 database
 class Course(models.Model):
     CourseID = models.IntegerField()
     CourseNumber = models.CharField(max_length=128)

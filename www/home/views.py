@@ -9,6 +9,7 @@ from .form import CourseForm, CourseLookup
 
 import json
 import ast
+from home import GrabJSTCourses
 
 
 @csrf_exempt
@@ -16,10 +17,15 @@ def index(request):
     if request.method == 'POST' and request.FILES['myfile']:
         myfile = request.FILES['myfile']
         fs = FileSystemStorage()
+        GrabJSTCourses.clear_dir('documents/jst/', True)
         fs.save("documents/jst/{}".format(myfile.name), myfile)
+        jst_list = GrabJSTCourses.grab_jst_courses('documents/jst/', myfile.name)
+        print(jst_list)
+        course_lookup = CourseLookup()
 
+        data = str(course_lookup.get_equivalent_courses(jst_list)).replace("'", '"').replace("None", "null")
         form = CourseForm()
-        data = ""
+        # data = ""
         response = ""
 
     elif request.method == 'POST':
