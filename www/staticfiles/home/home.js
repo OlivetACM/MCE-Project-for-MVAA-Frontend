@@ -1,36 +1,27 @@
 function decode_html(html) {
     var txt = document.createElement("textarea");
     txt.innerHTML = html;
-    console.log(txt.innerHTML)
     return txt.value;
 }
 
 function my_function(data) {
-    var clean_data = data.toString().replace(/'/g, '"')
-    var decoded_data = decode_html(clean_data)
-    var new_data = JSON.parse(decoded_data)
-    console.log(decoded_data)
-    document.write("Course Number: ", new_data[0]["CourseNumber"]);
-    document.write("<br>")
-    document.write("Course Name: ", new_data[0]["CourseName"]);
-    document.write("<br>")
-    document.write("Course Description: ", new_data[0]["CourseDescription"]);
+    clean_data = JSON.parse(decode_html(data))
 
-    document.write("<br>")
-    document.write("<br>")
-    document.write("<br>")
+    for (military_courses = 0; military_courses < clean_data.length; military_courses++) {
+        document.write('<hr style="border: 2px solid#5b9aa0;" /><br>')
+        for (equivalent_courses = 0; equivalent_courses < clean_data[military_courses].length; equivalent_courses++) {
+            if (equivalent_courses == 0) {
+                document.write("JST/AU Course Number: ", clean_data[military_courses][equivalent_courses]["CourseNumber"], "<br>")
+                document.write("Course Name:", clean_data[military_courses][equivalent_courses]["CourseName"], "<br>")
+                document.write("Course Decription: ", clean_data[military_courses][equivalent_courses]["CourseDescription"], "<br><br>")
+            }
 
+            document.write("OC Course Number: ", clean_data[military_courses][equivalent_courses]["CourseEquivalenceNonOC"], "<br>")
+            document.write("Course Name: ", clean_data[military_courses][equivalent_courses]["OCCourseName"], "<br>")
+            document.write("Course Description: ", clean_data[military_courses][equivalent_courses]["OCCourseDescription"], "<br>")
+            document.write("Approved Credits: ", clean_data[military_courses][equivalent_courses]["CourseCredit"], "<br><br>")
 
-    for(i = 0; i < 3; i++) {
-        document.write("Course Equivalence: ", new_data[i]["CourseEquivalenceNonOC"])
-        document.write("<br>")
-        document.write("Course Name: ", new_data[i]["OCCourseName"])
-        document.write("<br>")
-        document.write("Course Description: ", new_data[i]["OCCourseDescription"])
-        document.write("<br>")
-        document.write("Course Credits: ", new_data[i]["CourseCredit"])
-        document.write("<br>")
-        document.write("<br>")
+        }
     }
 }
 
@@ -42,3 +33,5 @@ function empty() {
         return false;
     };
 }
+
+// NV-2201-0128 NV-1710-0118

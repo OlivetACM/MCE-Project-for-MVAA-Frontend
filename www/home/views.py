@@ -1,14 +1,28 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 
+from django.core.files.storage import FileSystemStorage
+
 from django.views.decorators.csrf import csrf_exempt
 
 from .form import CourseForm, CourseLookup
 
+import json
+import ast
+
 
 @csrf_exempt
 def index(request):
-    if request.method == 'POST':
+    if request.method == 'POST' and request.FILES['myfile']:
+        myfile = request.FILES['myfile']
+        fs = FileSystemStorage()
+        fs.save("documents/jst/{}".format(myfile.name), myfile)
+
+        form = CourseForm()
+        data = ""
+        response = ""
+
+    elif request.method == 'POST':
         form = CourseForm(request.POST)
         #course_codes = request.POST.getlist('course_code')
         data = ""
@@ -24,14 +38,8 @@ def index(request):
                 response = "No course added"
             else:
                 course_lookup = CourseLookup()
-                look_up_course = ""
-                if textbox_course == "":
-                    look_up_course = course_codes
-                else:
-                    look_up_course = textbox_course
-                print("running course_lookup")
-                print("look_up_course is: ", look_up_course)
-                data = course_lookup.get_equivalent_courses(look_up_course)
+
+                data = str(course_lookup.get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
     else:
         form = CourseForm()
         data = ""
