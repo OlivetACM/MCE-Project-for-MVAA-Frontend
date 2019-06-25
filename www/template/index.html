@@ -152,9 +152,17 @@
 
 
                                 <form action="." method="post">
-                                    <label>Enter JST/AU Course Code: </label>
-                                    {{ form.as_table }}
-                                    <input type="submit" value="Enter" onClick="return empty()">
+                                    <label>Search or Select JST/AU Course Code: </label>
+                                    {{form.course_code_text}}
+                                    {% for checkbox in form.course_code %}
+                                    <div class="checkbox">
+                                        <label>
+                                                {{ checkbox.tag }} {{ checkbox.choice_label }}
+                                        </label>
+                                    </div>
+                                    {% endfor %}
+                                    
+                                    <input type="submit" value="Submit" onClick="return empty()">
                                 </form>
 
                                 <br>

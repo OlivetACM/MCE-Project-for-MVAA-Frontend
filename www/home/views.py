@@ -16,12 +16,22 @@ def index(request):
 
         if form.is_valid():
             course_codes = form.cleaned_data['course_code']
+            textbox_course = []
+            textbox_course.append(form.cleaned_data['course_code_text'])
+            print("course_codes is: ", course_codes)
 
-            if course_codes == "":
+            if course_codes == "" and textbox_course == "":
                 response = "No course added"
             else:
                 course_lookup = CourseLookup()
-                data = course_lookup.get_equivalent_courses(course_codes)
+                look_up_course = ""
+                if textbox_course == "":
+                    look_up_course = course_codes
+                else:
+                    look_up_course = textbox_course
+                print("running course_lookup")
+                print("look_up_course is: ", look_up_course)
+                data = course_lookup.get_equivalent_courses(look_up_course)
     else:
         form = CourseForm()
         data = ""

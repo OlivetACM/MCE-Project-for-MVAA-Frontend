@@ -10,7 +10,7 @@ logging.basicConfig(filename='mce.log', level=logging.ERROR)
 """
 class CourseCodes(object):
     def __init__(self):
-        self.query = Course.objects.filter(CourseEquivalenceNonOC__isnull=False,)
+        self.query = Course.objects.filter(CourseEquivalenceNonOC__isnull=False,).order_by('id')
         self.course_numbers = set()
         for i in self.query:
             self.course_numbers.add((i.CourseNumber, i.CourseNumber))
@@ -23,8 +23,10 @@ class CourseCodes(object):
    information on ChoicField()
 """
 class CourseForm(forms.Form):
-    course_code_choices = CourseCodes()
-    course_code = forms.MultipleChoiceField(choices=course_code_choices, label="", initial='', widget=forms.CheckboxSelectMultiple(), required=True)#MultipleChoiceField() works the best with Checkboxselectmultiple()
+    course_code_choices = sorted(CourseCodes())
+    course_code_text = forms.CharField(max_length=30, required=False)
+    course_code = forms.MultipleChoiceField(choices=course_code_choices, label="", initial='', widget=forms.CheckboxSelectMultiple(), required=False)#MultipleChoiceField() works the best with Checkboxselectmultiple()
+    print("printing info: ", course_code)
 
 class CourseLookup:
     def __init__(self):
