@@ -23,6 +23,7 @@ def index(request):
         response = ""
 
     elif request.method == 'POST':
+        print("request.Post is: ", request.POST)
         form = CourseForm(request.POST)
         #course_codes = request.POST.getlist('course_code')
         data = ""

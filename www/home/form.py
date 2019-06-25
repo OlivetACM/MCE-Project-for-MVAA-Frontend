@@ -34,12 +34,7 @@ class CourseLookup:
 
     def get_equivalent_courses(self, requested_courses):
         database_result = []
-<<<<<<< HEAD
-        #requested_courses = requested_courses.split(" ")   # NEEDS TO CHANGE AS LIST WILL BE `requested_courses`
-        print(requested_courses)
-=======
         requested_courses = requested_courses.split(" ")   # NEEDS TO CHANGE AS LIST WILL BE `requested_courses`
->>>>>>> 20e911a14019db3d369e854bc316e7ee1fa4ff4d
         for course in requested_courses:
             database_result.append(self.search_database(course))
 
