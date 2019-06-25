@@ -91,6 +91,15 @@
         /*]]>*/
     </style>
 
+    <style>
+        JST {
+        }
+        EQUIV {
+        white-space: pre-wrap;
+        padding: 0px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -136,34 +145,29 @@
                         <div id="c_main-content" class="cr">
                             <div id="content" style="padding: 15px;">
 
+                                <form method="post" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    <input type="file" name="myfile">
+                                    <button type="submit">Upload</button>
+                                </form>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+                                <br>
 
                                 <form action="." method="post">
                                     <label>Enter JST/AU Course Code: </label>
-                                    <input id="course_code" type="text" name="course_code" value="">
+                                    <input id="course_code" name="course_code" type="text" value="">
                                     <input type="submit" value="Enter" onClick="return empty()" />
                                 </form>
 
                                 <br>
-                                <script type="text/javascript">
 
+
+                                <script type="text/javascript">
                                     if ("{{data}}") {
                                         my_function("{{data}}");
                                     }
                                 </script>
+
                             </div>
                         </div>
                         <div class="c_et_pb_section c_global-footer c_et_pb_section_7 c_et_pb_with_background c_et_section_regular cr">
