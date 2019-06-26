@@ -2907,3 +2907,706 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/django/utils/datastructures.py", line 80, in __getitem__
     raise MultiValueDictKeyError(key)
 django.utils.datastructures.MultiValueDictKeyError: 'myfile'
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/utils/datastructures.py", line 78, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'myfile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 17, in index
+    if request.method == 'POST' and request.FILES['myfile']:
+  File "/usr/local/lib/python3.7/site-packages/django/utils/datastructures.py", line 80, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'myfile'
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 22, in index
+    jst_list = GrabJSTCourses.grab_jst_courses('documents/jst/', myfile.name)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/GrabJSTCourses.py", line 118, in grab_jst_courses
+    course_list = read_and_scan(text_dir, num_pages, trans_dir)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/GrabJSTCourses.py", line 82, in read_and_scan
+    reorder_files(file_list, trans_dir)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/GrabJSTCourses.py", line 32, in reorder_files
+    for line in open(file):
+FileNotFoundError: [Errno 2] No such file or directory: 'documents/jst/working/images/text/image-0.txt'
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 51, in index
+    data = str(course_lookup.get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+NameError: name 'course_code' is not defined
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 44, in index
+    print("course_codes is: ", course_codes)
+NameError: name 'course_codes' is not defined
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 34, in index
+    print("request.Post is: ", request.POST.course_codes)
+AttributeError: 'QueryDict' object has no attribute 'course_codes'
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 52, in index
+    data = str(course_lookup.get_equivalent_courses(course_codes)).replace("'", '"').replace("None", "null")
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 52, in index
+    data = str(course_lookup.get_equivalent_courses(course_codes)).replace("'", '"').replace("None", "null")
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 52, in index
+    data = str(course_lookup.get_equivalent_courses(course_codes)).replace("'", '"').replace("None", "null")
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 52, in index
+    data = str(course_lookup.get_equivalent_courses(course_codes)).replace("'", '"').replace("None", "null")
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 52, in index
+    data = str(course_lookup.get_equivalent_courses(course_codes)).replace("'", '"').replace("None", "null")
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 52, in index
+    data = str(course_lookup.get_equivalent_courses(course_codes)).replace("'", '"').replace("None", "null")
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 49, in index
+    process_data(course_codes)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 62, in process_data
+    data = str(course_lookup.get_equivalent_courses(data)).replace("'", '"').replace("None", "null")
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 49, in index
+    data = process_data(course_codes)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 62, in process_data
+    data = str(course_lookup.get_equivalent_courses(data)).replace("'", '"').replace("None", "null")
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 49, in index
+    data = process_data(course_codes)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 62, in process_data
+    data = str(course_lookup.get_equivalent_courses(data)).replace("'", '"').replace("None", "null")
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 52, in index
+    data = process_data(course_codes)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 65, in process_data
+    data = str(course_lookup.get_equivalent_courses(data)).replace("'", '"').replace("None", "null")
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 52, in index
+    data = process_data(course_codes)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 65, in process_data
+    data = str(course_lookup.get_equivalent_courses(data)).replace("'", '"').replace("None", "null")
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 52, in index
+    data = process_data(course_codes)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 65, in process_data
+    data = str(course_lookup.get_equivalent_courses(data)).replace("'", '"').replace("None", "null")
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 52, in index
+    data = process_data(course_codes)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 65, in process_data
+    data = str(course_lookup.get_equivalent_courses(data)).replace("'", '"').replace("None", "null")
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/utils/datastructures.py", line 78, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'myfile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 18, in index
+    if request.method == 'POST' and request.FILES['myfile']:
+  File "/usr/local/lib/python3.7/site-packages/django/utils/datastructures.py", line 80, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'myfile'
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 57, in index
+    return render_to_response('index.html', {'form': form, 'data': data, 'response': response}, RequestContext(request))
+UnboundLocalError: local variable 'form' referenced before assignment
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 57, in index
+    return render_to_response('index.html', {'form': form, 'data': data, 'response': response}, RequestContext(request))
+UnboundLocalError: local variable 'form' referenced before assignment
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 57, in index
+    return render_to_response('index.html', {'form': form, 'data': data, 'response': response}, RequestContext(request))
+UnboundLocalError: local variable 'form' referenced before assignment
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 57, in index
+    return render_to_response('index.html', {'form': form, 'data': data, 'response': response}, RequestContext(request))
+UnboundLocalError: local variable 'form' referenced before assignment
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/utils/datastructures.py", line 78, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'myfile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 18, in index
+    if request.method == 'POST' and request.FILES['myfile']:
+  File "/usr/local/lib/python3.7/site-packages/django/utils/datastructures.py", line 80, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'myfile'
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/utils/datastructures.py", line 78, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'myfile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 18, in index
+    if request.method == 'POST' and request.FILES['myfile']:
+  File "/usr/local/lib/python3.7/site-packages/django/utils/datastructures.py", line 80, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'myfile'
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 57, in index
+    return render_to_response('index.html', {'form': form, 'data': data, 'response': response}, RequestContext(request))
+UnboundLocalError: local variable 'form' referenced before assignment
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 57, in index
+    return render_to_response('index.html', {'form': form, 'data': data, 'response': response}, RequestContext(request))
+UnboundLocalError: local variable 'form' referenced before assignment
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/Users/koryslaby/Desktop/MCE/GitHub/MCE-Project-for-MVAA-Frontend/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js

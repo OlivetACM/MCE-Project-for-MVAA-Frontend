@@ -14,6 +14,8 @@ from home import GrabJSTCourses
 
 @csrf_exempt
 def index(request):
+    
+    """
     if request.method == 'POST' and request.FILES['myfile']:
         myfile = request.FILES['myfile']
         fs = FileSystemStorage()
@@ -24,12 +26,16 @@ def index(request):
         course_lookup = CourseLookup()
 
         data = str(course_lookup.get_equivalent_courses(jst_list)).replace("'", '"').replace("None", "null")
-        form = CourseForm()
-        # data = ""
+        #form = CourseForm()
+        data = ""
         response = ""
-
-    elif request.method == 'POST':
-        print("request.Post is: ", request.POST)
+    else:
+        form = ""
+        data = ""
+        response = ""
+    """
+    
+    if request.method == 'POST':
         form = CourseForm(request.POST)
         #course_codes = request.POST.getlist('course_code')
         data = ""
@@ -37,19 +43,25 @@ def index(request):
 
         if form.is_valid():
             course_codes = form.cleaned_data['course_code']
-            textbox_course = []
-            textbox_course.append(form.cleaned_data['course_code_text'])
-            print("course_codes is: ", course_codes)
+            textbox_course = [form.cleaned_data['course_code_text']]
 
             if course_codes == "" and textbox_course == "":
                 response = "No course added"
             else:
-                course_lookup = CourseLookup()
-
-                data = str(course_lookup.get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+                if textbox_course != "":
+                    course_codes.append(textbox_course[0])#only one course is entered at a time
+                if len(course_codes) != 0:
+                    course_codes.sort()
+                    data = process_data(course_codes)
     else:
         form = CourseForm()
         data = ""
         response = ""
+    
 
     return render_to_response('index.html', {'form': form, 'data': data, 'response': response}, RequestContext(request))
+
+def process_data(data):
+    course_lookup = CourseLookup()
+    data = str(course_lookup.get_equivalent_courses(data)).replace("'", '"').replace("None", "null")
+    return data

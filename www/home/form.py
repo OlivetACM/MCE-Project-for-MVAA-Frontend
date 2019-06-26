@@ -25,7 +25,7 @@ class CourseCodes(object):
 class CourseForm(forms.Form):
     course_code_choices = sorted(CourseCodes())
     course_code_text = forms.CharField(max_length=30, required=False)
-    course_code = forms.MultipleChoiceField(choices=course_code_choices, label="", initial='', widget=forms.CheckboxSelectMultiple(), required=False)#MultipleChoiceField() works the best with Checkboxselectmultiple()
+    course_code = forms.MultipleChoiceField(choices=course_code_choices, initial='', widget=forms.CheckboxSelectMultiple(), required=False)#MultipleChoiceField() works the best with Checkboxselectmultiple()
     print("printing info: ", course_code)
 
 class CourseLookup:
