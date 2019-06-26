@@ -7,7 +7,7 @@ from django.http import HttpResponseRedirect
 
 from .form import CourseForm, CourseLookup
 
-from home import GrabJSTCourses
+from home import jstreader
 
 
 @csrf_exempt
@@ -22,9 +22,9 @@ def pdf_processing(request):
         # try:
         myfile = request.FILES['myfile']
         fs = FileSystemStorage()
-        GrabJSTCourses.clear_dir('documents/jst/', True)
+        jstreader.clear_dir('documents/jst/', True)
         fs.save("documents/jst/{}".format(myfile.name), myfile)
-        jst_list = GrabJSTCourses.grab_jst_courses('documents/jst/', myfile.name)
+        jst_list = jstreader.grab_jst_courses('documents/jst/', myfile.name)
         print(jst_list)
         course_lookup = CourseLookup()
 
