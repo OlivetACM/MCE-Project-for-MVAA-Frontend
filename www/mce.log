@@ -3610,3 +3610,1382 @@ WARNING:django.request:Not Found: /ping.js
 WARNING:django.request:Not Found: /ping.js
 WARNING:django.request:Not Found: /ping.js
 WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+WARNING:django.request:Bad Request: /
+ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+WARNING:django.request:Bad Request: /favicon.ico
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /pdf_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/utils/datastructures.py", line 78, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'myfile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 23, in pdf_processing
+    if request.method == 'POST' and request.FILES['myfile']:
+  File "/usr/local/lib/python3.7/site-packages/django/utils/datastructures.py", line 80, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'myfile'
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 99, in single_course_processing
+    course_codes.append(textbox_course[0])
+NameError: name 'course_codes' is not defined
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 104, in single_course_processing
+    for  course in course_code_text[0]:
+NameError: name 'course_code_text' is not defined
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 108, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 108, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 108, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 108, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 48, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 62, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 49, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 63, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 49, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 63, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 49, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 63, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 49, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 64, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 49, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 64, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 49, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 64, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 49, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 64, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 49, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 64, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 50, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 65, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 40, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 51, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 66, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 41, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 52, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 67, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 41, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 53, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 68, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 44, in get_equivalent_courses
+    print("data is: ", data)
+UnboundLocalError: local variable 'data' referenced before assignment
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 46, in get_equivalent_courses
+    if data:
+UnboundLocalError: local variable 'data' referenced before assignment
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 42, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 57, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 72, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 42, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 53, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 68, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 42, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 53, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 68, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 42, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 53, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 71, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 42, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 53, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 74, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 42, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 53, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 75, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 42, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 53, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 76, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 42, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 53, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 76, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/code/www/home/form.py", line 77, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 42, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 53, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 79, in format_results
+    print("CourseNumber ", CourseEquivalenceNonOC, " Not found!!")
+NameError: name 'CourseEquivalenceNonOC' is not defined
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 107, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 42, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 53, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 77, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 55, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 42, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 53, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 77, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 55, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 47, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 60, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 55, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 47, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 63, in format_results
+    raise e
+  File "/code/www/home/form.py", line 60, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/code/www/home/form.py", line 60, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 55, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 47, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 64, in format_results
+    format_results["CourseID"] = "Not in our database"
+NameError: name 'format_results' is not defined
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/code/www/home/form.py", line 60, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 55, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 47, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 64, in format_results
+    format_results["CourseID"] = "Not in our database"
+NameError: name 'format_results' is not defined
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 55, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 47, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 63, in format_results
+    raise e
+  File "/code/www/home/form.py", line 60, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 55, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 47, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 63, in format_results
+    raise e
+  File "/code/www/home/form.py", line 60, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 55, in single_course_processing
+    data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+  File "/code/www/home/form.py", line 39, in get_equivalent_courses
+    data = self.search_database(course)
+  File "/code/www/home/form.py", line 47, in search_database
+    return self.format_results(database_data)
+  File "/code/www/home/form.py", line 63, in format_results
+    raise e
+  File "/code/www/home/form.py", line 60, in format_results
+    course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+dbadmin.models.Course.DoesNotExist: Course matching query does not exist.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
