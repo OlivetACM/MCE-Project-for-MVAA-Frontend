@@ -22,8 +22,6 @@
 
     <!--MCE Scripts-->
     <script src="{% static "/home/home.js" %}"></script>
-    <script src="{% static "/home/jquery-1.9.1.js" %}"></script>
-
 
     <script>
         /*<![CDATA[*/
@@ -145,19 +143,12 @@
                         <div id="c_main-content" class="cr">
                             <div id="content" style="padding: 15px;">
 
-                                <form action="pdf_processing" method="post" enctype="multipart/form-data">
-                                    {% csrf_token %}
-                                    <input type="file" name="myfile">
-                                    <button type="submit">Upload</button>
-                                </form>
+                                <script type="text/javascript">
+                                    if ("{{data}}") {
+                                        my_function("{{data}}");
+                                    }
+                                </script>
 
-                                <br>
-
-                                <form action="single_course_processing" method="post">
-                                    <label>Enter JST/AU Course Code: </label>
-                                    <input id="course_code" name="course_code" type="text" value="">
-                                    <input type="submit" value="Enter" onClick="return empty()" />
-                                </form>
                             </div>
                         </div>
                         <div class="c_et_pb_section c_global-footer c_et_pb_section_7 c_et_pb_with_background c_et_section_regular cr">
