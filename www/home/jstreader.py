@@ -109,16 +109,16 @@ def read_and_scan(text_dir, num, trans_dir):
         file_list.append(filename)
 
     # rearrange files
-    reorder_files(file_list, trans_dir)
+    # reorder_files(file_list, trans_dir)
 
-    for i in range(0, num):
+    for i in range(0, num - 1):
         print("Scanning text file.. ", i)
-        filename = trans_dir + 'working/images/text/' + str(i) + '.txt'
+        filename = trans_dir + 'working/images/text/image-' + str(i) + '.txt'
         for line in open(filename):
-            if "Military Experience" in line:
-                if saved_course is not None and saved_course not in course_list:
-                    course_list.append(saved_course)
-                return course_list
+            # if "Military Experience" in line:
+                # if saved_course is not None and saved_course not in course_list:
+                #     course_list.append(saved_course)
+                # return course_list
             if "Credit Is Not Recommended" in line:
                 saved_course = None
             if 'MC-' in line or 'NV-' in line or 'AR-' in line or 'CG-' in line or 'AF-' in line or 'DD-' in line \
