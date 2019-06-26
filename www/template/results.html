@@ -22,8 +22,6 @@
 
     <!--MCE Scripts-->
     <script src="{% static "/home/home.js" %}"></script>
-    <script src="{% static "/home/jquery-1.9.1.js" %}"></script>
-
 
     <script>
         /*<![CDATA[*/
@@ -145,27 +143,12 @@
                         <div id="c_main-content" class="cr">
                             <div id="content" style="padding: 15px;">
 
-                                <form action="pdf_processing" method="post" enctype="multipart/form-data">
-                                    {% csrf_token %}
-                                    <input type="file" name="myfile">
-                                    <button type="submit">Upload</button>
-                                </form>
+                                <script type="text/javascript">
+                                    if ("{{data}}") {
+                                        my_function("{{data}}");
+                                    }
+                                </script>
 
-                                <br>
-
-                                <form action="." method="post">
-                                    <label>Search or Select JST/AU Course Code: </label>
-                                    {{form.course_code_text}}
-                                    {% for checkbox in form.course_code %}
-                                    <div class="checkbox">
-                                        <label>
-                                                {{ checkbox.tag }} {{ checkbox.choice_label }}
-                                        </label>
-                                    </div>
-                                    {% endfor %}
-                                    
-                                    <input type="submit" value="Submit" onClick="return empty()">
-                                </form>
                             </div>
                         </div>
                         <div class="c_et_pb_section c_global-footer c_et_pb_section_7 c_et_pb_with_background c_et_section_regular cr">
