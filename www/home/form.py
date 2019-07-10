@@ -12,15 +12,19 @@ class CourseForm(forms.Form):
 
 class CourseLookup:
     def __init__(self):
-        pass
+        self.number_of_oc_courses = 0
+        self.number_of_approved_credits = 0
 
     def get_equivalent_courses(self, requested_courses):
-        database_result = []
+        database_result = {}
         # requested_courses = requested_courses.split(" ")   # NEEDS TO CHANGE AS LIST WILL BE `requested_courses`
         for course in requested_courses:
             data = self.search_database(course)
             if data:
-                database_result.append(data)
+                database_result["Data"] = [data]
+                database_result["MetaData"] = {"ApprovedCredits": self.number_of_approved_credits,
+                                               "NumberOfJSTCourses": len(requested_courses),
+                                               "NumberOfOCCourses": self.number_of_oc_courses}
 
         print(database_result)
         return database_result
@@ -34,12 +38,14 @@ class CourseLookup:
             print(database_data)
             combined_courses = []
             for course in database_data:
+                self.number_of_oc_courses += 1
                 formatted_courses = {}
                 formatted_courses["CourseID"] = course.CourseID
                 formatted_courses["CourseNumber"] = course.CourseNumber
                 formatted_courses["CourseName"] = course.CourseName
                 formatted_courses["CourseDescription"] = course.CourseDescription
                 formatted_courses["CourseCredit"] = course.CourseCredit
+                self.number_of_approved_credits += float(course.CourseCredit)
 
                 course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
                 formatted_courses["CourseEquivalenceNonOC"] = course.CourseEquivalenceNonOC
@@ -50,6 +56,7 @@ class CourseLookup:
                 formatted_courses["ReviewerID"] = course.ReviewerID
                 combined_courses.append(formatted_courses)
             print(combined_courses)
+            print(self.number_of_approved_credits)
             return combined_courses
 
         except IndexError as e:
