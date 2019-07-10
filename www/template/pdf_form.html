@@ -11,50 +11,26 @@
             size: A4;
             margin: 1cm;
         }
-        .tables {
-            width: 100%;
-            max-width: 100%;
-            margin-bottom: 5px;
-            background-color: #fff;
-        }
         .tables th,
         .tables td {
             padding: 5px;
             vertical-align: top;
             text-align: left;
         }
-        .tables thead th {
-            vertical-align: bottom;
-        }
-        .tables .tables {
-            background-color: #fff;
-        }
-        .list-group {
-            display: block;
-            width: 100%;
-            list-style: none;
-            margin-top: 15px;
-            margin-bottom: 15px;
-        }
-        .list-group p {
-            width: 100%;
-            height: 20px;
-            line-height: 20px;
-            list-style: none;
-            font-size: 1.1em;
-        }
         .pdf_title {
             text-align: center;
         }
-        .total_credits {
-            text-align: right;
+        .pdf_title h1 {
+            font-size:15px
         }
-        .pdf_title {
-            width:220px;
-            height:68px;
+        .total_credits {
+            
         }
         .equivilent_courses {
-            padding: 32px;
+            padding: 0px 64px;
+        }
+        .equivilent_courses_header {
+            padding: 0px 32px;
         }
     </style>
 </head>
@@ -68,25 +44,27 @@
     <div class="card">
         <div class="tables">
             
-            <table class="jst_table">
-                <thead>
-                <tr>
-                    <th>Accepted JST Courses</th>
-                </tr>
-                </thead>
+            <h1>Accepted JST Courses:</h1>
+            <table id="jst_table" class="list-group">
                 <tbody>
+                    {#looping through queryset with selected jst course objects#}
                     {% for queryset in data %}
-                            {% for Course in queryset.all|slice:":1" %}
+                            {% for Course in queryset.all|slice:":1" %} {#we only want the first object in each queryset all others will be the same#}
                                 <tr><td>
-                                    {{Course.CourseNumber}} {{Course.CourseName}}
+                                    {#displaying the course number and course name#}
+                                    <h5>JST: {{Course.CourseNumber}} {{Course.CourseName}}</h5>
+                                    <div class="equivilent_courses_header">
+                                        <h6>Equivelant OC Courses:</h6>
+                                    </div>
+                                    {#looping through queryset of jst courses again to find equivalent oc courses#}
                                     {% for Courses in queryset.all %}
                                         {% for equivilent_queryset in equivalent_courses %}
-                                            {% for equivilency in equivilent_queryset.all %}
+                                            {% for equivilency in equivilent_queryset.all %}{#each jst course is the same but with diferent oc equivalencies#}
                                                 {% if Courses.CourseEquivalenceNonOC == equivilency.CourseNumber %}
                                                     <div class="equivilent_courses">
                                                         <p>{{equivilency.CourseNumber}} {{equivilency.CourseName}}:</p>
                                                         <div class="total_credits">
-                                                            {{equivilency.CourseCredit}}
+                                                            credits: {{equivilency.CourseCredit}}
                                                         </div>
                                                     </div>
                                                 {% endif %}
@@ -101,23 +79,16 @@
                     {% endfor %}
                 </tbody>
             </table>
-            <table class="jst_courses_under_review">
-                <thead>
-                <tr>
-                    <th>Courses In Review</th>
-                </tr>
-                </thead>
+            <h1>Courses In Review:</h1>
+            <table id="jst_courses_under_review" class="list-group">
                 <tbody>
+                    <tr><td>None</td></tr>
                 </tbody>
             </table>
-            <table class="jst_rejected_courses">
-                <thead>
-                <tr>
-                    <th>Rejected Courses</th>
-                </tr>
-                </thead>
+            <h1>Rejected Courses:</h1>
+            <table id="jst_rejected_courses" class="list-group">
                 <tbody>
-                    
+                    <tr><td>None</td></tr>
                 </tbody>
             </table>
         </div>
