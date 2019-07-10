@@ -31,20 +31,23 @@ class CourseLookup:
     def __init__(self):
         pass
 
+    """ !!!!get_equivalent_courses and search_database have been modifies to send to pdf check older version to see
+        how to send information to results page.!!!!
+    """
     def get_equivalent_courses(self, requested_courses):
         database_result = []
         # requested_courses = requested_courses.split(" ")   # NEEDS TO CHANGE AS LIST WILL BE `requested_courses`
         for course in requested_courses:
             if course:
+                #print("course is in get_equivalent_courses: ", course)
                 data = self.search_database(course)
                 if data:
                     database_result.append(data)
         return database_result
 
-    def search_database(self, course_number):
-        database_data = Course.objects.filter(CourseNumber=course_number, CourseEquivalenceNonOC__isnull=False)
-        print("database_data is: ", database_data)
-        return self.format_results(database_data)
+    def search_database(self, course_number, equivalant_check=False):
+        database_data = Course.objects.filter(CourseNumber=course_number, CourseEquivalenceNonOC__isnull=equivalant_check)
+        return database_data
 
     def format_results(self, database_data):
         try:

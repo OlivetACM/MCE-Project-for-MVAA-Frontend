@@ -21,7 +21,6 @@ class Course(models.Model):
     )
     ReviewerID = models.IntegerField(null=True, blank=True)
 
-
 class Outcome(models.Model):
     OutcomeID = models.IntegerField()
     OutcomeDescription = models.CharField(max_length=1024)

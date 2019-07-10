@@ -36,7 +36,7 @@ urlpatterns = [
     url(r'^$', home_views.index, name='home'),
     url(r'^pdf_processing', home_views.pdf_processing, name='pdf_processing'),
     url(r'^single_course_processing', home_views.single_course_processing, name='single_course_processing'),
-    url(r'^results', home_views.results, name='results')
+    url(r'^result', home_views.result, name='result')
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

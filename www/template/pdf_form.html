@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+{% load static %}
+{% csrf_token %}
+<head>
+    <script src="{% static "/home/home.js" %}"></script>
+    <meta charset="utf-8">
+    <title>JST_Report</title>
+    <style type="text/css">
+        @page {
+            size: A4;
+            margin: 1cm;
+        }
+        .tables {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 5px;
+            background-color: #fff;
+        }
+        .tables th,
+        .tables td {
+            padding: 5px;
+            vertical-align: top;
+            text-align: left;
+        }
+        .tables thead th {
+            vertical-align: bottom;
+        }
+        .tables .tables {
+            background-color: #fff;
+        }
+        .list-group {
+            display: block;
+            width: 100%;
+            list-style: none;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .list-group p {
+            width: 100%;
+            height: 20px;
+            line-height: 20px;
+            list-style: none;
+            font-size: 1.1em;
+        }
+        .pdf_title {
+            text-align: center;
+        }
+        .total_credits {
+            text-align: right;
+        }
+        .pdf_title {
+            width:220px;
+            height:68px;
+        }
+        .equivilent_courses {
+            padding: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="pdf_title">
+        <img src="http://{{ request.get_host }}{% static "pdffiles/OlivetCollegeLogo.jpg" %}" alt="OlivetCollegeLogo">
+        <h1>Olivet College Military Course Equivilancy PDF</h1>
+    </div>
+
+<div class="container">
+    <div class="card">
+        <div class="tables">
+            
+            <table class="jst_table">
+                <thead>
+                <tr>
+                    <th>Accepted JST Courses</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for queryset in data %}
+                            {% for Course in queryset.all|slice:":1" %}
+                                <tr><td>
+                                    {{Course.CourseNumber}} {{Course.CourseName}}
+                                    {% for Courses in queryset.all %}
+                                        {% for equivilent_queryset in equivalent_courses %}
+                                            {% for equivilency in equivilent_queryset.all %}
+                                                {% if Courses.CourseEquivalenceNonOC == equivilency.CourseNumber %}
+                                                    <div class="equivilent_courses">
+                                                        <p>{{equivilency.CourseNumber}} {{equivilency.CourseName}}:</p>
+                                                        <div class="total_credits">
+                                                            {{equivilency.CourseCredit}}
+                                                        </div>
+                                                    </div>
+                                                {% endif %}
+                                            {% endfor %}
+                                        {% endfor %}
+                                    {% endfor %}
+                                {% endfor %}
+                            <div class="total_credits">
+                                Total Transferable Credits:
+                            </div>
+                        </td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <table class="jst_courses_under_review">
+                <thead>
+                <tr>
+                    <th>Courses In Review</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <table class="jst_rejected_courses">
+                <thead>
+                <tr>
+                    <th>Rejected Courses</th>
+                </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
