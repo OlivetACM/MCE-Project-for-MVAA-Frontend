@@ -5,7 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 from django.http import HttpResponseRedirect
 
-from .form import CourseForm, CourseLookup
+from .form import CourseForm, CourseLookup, PDFINFO, JST_Courses_Credits
 from .render import Render
 
 from home import jstreader
@@ -51,18 +51,33 @@ def single_course_processing(request):
             
             course_code.append(textbox_course[0])
 
-
             course_code.sort()
             #data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
             data = CourseLookup().get_equivalent_courses(course_code)
-            equivalent_courses = []
+            equivalent_courses = set()
+            jst_course_credits_dict = {}
+            jst_course_credits = JST_Courses_Credits()#creating object where I will store JST courses and there total transferable credits.
+
 
             #pulling equivalent oc courses for each Millitary.
             for sets in data:#data is a list of sets.
+                total_credits = 0
+                current_course = sets[0]
                 for Course in sets:#sets is made up of Course Objects.
-                    equivalent_courses.append(CourseLookup().search_database(Course.CourseEquivalenceNonOC, equivalant_check=True))#OC courses do not have equivalant courses filled out.
+                    current_course = Course
+                    oc_course = CourseLookup().get_course(Course.CourseEquivalenceNonOC)
+                    if oc_course != None:
+                        total_credits += float(oc_course.CourseCredit)
+                        equivalent_courses.add(oc_course)#OC courses do not have equivalant courses filled out.
+                jst_course_credits_dict[Course.CourseNumber] = total_credits
 
-            return Render.render('pdf_form.html', {'data': data, 'equivalent_courses': equivalent_courses, 'response':'', 'request':request})#, 'equivalent_courses': equivalent_courses
+            #creating pdfinfo object with to fill in the information and sent it to the PDF form created in render.py
+            pdf_info = PDFINFO()
+            pdf_info.oc_equivilance = equivalent_courses
+            pdf_info.jst_course_credits = jst_course_credits_dict
+            pdf_info.selected_courses = data
+
+            return Render.render('pdf_form.html', {'data': pdf_info, 'response':'', 'request':request})
             #request.session['processed_data'] = data
             #return HttpResponseRedirect('/result')
 

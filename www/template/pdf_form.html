@@ -3,7 +3,6 @@
 {% load static %}
 {% csrf_token %}
 <head>
-    <script src="{% static "/home/home.js" %}"></script>
     <meta charset="utf-8">
     <title>JST_Report</title>
     <style type="text/css">
@@ -23,13 +22,13 @@
         .pdf_title h1 {
             font-size:15px
         }
-        .total_credits {
-            
-        }
         .equivilent_courses {
             padding: 0px 64px;
         }
         .equivilent_courses_header {
+            padding: 0px 32px;
+        }
+        .total_credits {
             padding: 0px 32px;
         }
     </style>
@@ -37,7 +36,7 @@
 <body>
     <div class="pdf_title">
         <img src="http://{{ request.get_host }}{% static "pdffiles/OlivetCollegeLogo.jpg" %}" alt="OlivetCollegeLogo">
-        <h1>Olivet College Military Course Equivilancy PDF</h1>
+        <h1>Olivet College Military Course Equivalency PDF</h1>
     </div>
 
 <div class="container">
@@ -47,36 +46,45 @@
             <h1>Accepted JST Courses:</h1>
             <table id="jst_table" class="list-group">
                 <tbody>
-                    {#looping through queryset with selected jst course objects#}
-                    {% for queryset in data %}
-                            {% for Course in queryset.all|slice:":1" %} {#we only want the first object in each queryset all others will be the same#}
+                        {% for queryset in data.selected_courses %} {#looping through queryset with selected jst course objects#}
+                            {% for Course in queryset.all %} {#we only want the first object in each queryset all others will be the same#}
                                 <tr><td>
                                     {#displaying the course number and course name#}
-                                    <h5>JST: {{Course.CourseNumber}} {{Course.CourseName}}</h5>
-                                    <div class="equivilent_courses_header">
-                                        <h6>Equivelant OC Courses:</h6>
-                                    </div>
-                                    {#looping through queryset of jst courses again to find equivalent oc courses#}
-                                    {% for Courses in queryset.all %}
-                                        {% for equivilent_queryset in equivalent_courses %}
-                                            {% for equivilency in equivilent_queryset.all %}{#each jst course is the same but with diferent oc equivalencies#}
-                                                {% if Courses.CourseEquivalenceNonOC == equivilency.CourseNumber %}
-                                                    <div class="equivilent_courses">
-                                                        <p>{{equivilency.CourseNumber}} {{equivilency.CourseName}}:</p>
-                                                        <div class="total_credits">
-                                                            credits: {{equivilency.CourseCredit}}
-                                                        </div>
-                                                    </div>
-                                                {% endif %}
-                                            {% endfor %}
-                                        {% endfor %}
+                                    {% if forloop.first %}
+                                        <h5>JST: {{Course.CourseNumber}} {{Course.CourseName}}</h5>
+                                        <div class="equivilent_courses_header">
+                                            <h6>Equivalent OC Courses:</h6>
+                                        </div>
+                                    {% endif %}
+
+                                    {% for oc_course in data.oc_equivilance %}
+                                        {% if oc_course.CourseNumber == Course.CourseEquivalenceNonOC %} {# there are some OC courses not in the database#}
+                                            <div class="equivilent_courses">
+                                                <p><strong>{{oc_course.CourseNumber}} {{oc_course.CourseName}}:</strong></p>
+                                                <div class="equivilent_courses_discription">
+                                                    <p><strong>Description:</strong> {{oc_course.CourseDescription}}</p>
+                                                </div>
+                                                <div class="credits">
+                                                    Credits: {{oc_course.CourseCredit}}
+                                                </div>
+                                            </div>
+                                        {% endif %}
                                     {% endfor %}
-                                {% endfor %}
-                            <div class="total_credits">
-                                Total Transferable Credits:
-                            </div>
-                        </td></tr>
-                    {% endfor %}
+                                    </td></tr>
+                                    <tr><td>
+
+                                    {% if forloop.last %}{# after the last JST class is displayed we want to show total credits.#}
+                                        {% for key,value in data.jst_course_credits.items %}
+                                            {% if Course.CourseNumber == key %}
+                                                <div class="total_credits">
+                                                    Total Transferable Credits: {{value}}
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    {% endif %}
+                                    </td></tr>
+                            {% endfor %}
+                        {% endfor %}
                 </tbody>
             </table>
             <h1>Courses In Review:</h1>

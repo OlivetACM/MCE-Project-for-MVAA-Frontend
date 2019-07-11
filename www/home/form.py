@@ -47,7 +47,17 @@ class CourseLookup:
 
     def search_database(self, course_number, equivalant_check=False):
         database_data = Course.objects.filter(CourseNumber=course_number, CourseEquivalenceNonOC__isnull=equivalant_check)
+        if equivalant_check == True:
+            if database_data:
+                print("in search_database: ", database_data)
+            
         return database_data
+
+    def get_course(self, course_code):
+        try:
+            return Course.objects.get(CourseNumber=course_code)
+        except Exception as e:
+            print("!!!!!Course Equivalant ", course_code, " Not found In DataBase!!!!!")
 
     def format_results(self, database_data):
         try:
@@ -79,3 +89,34 @@ class CourseLookup:
         except IndexError as e:
             logging.error("Course was not found: ", e)
             return ""
+
+# used in sending info to pdf
+class JST_Courses_Credits:
+    courses = {}
+
+# used in sending info to pdf
+class PDFINFO:
+    selected_courses = {}
+    oc_equivilance = {}
+    jst_course_credits = []
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
