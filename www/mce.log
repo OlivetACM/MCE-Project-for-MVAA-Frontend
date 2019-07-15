@@ -8544,3 +8544,38 @@ INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
 INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
 WARNING:django.request:Not Found: /ping.js
 WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /apple-touch-icon-precomposed.png
+WARNING:django.request:Not Found: /apple-touch-icon.png
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/code/www/home/form.py changed, reloading.
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /single_course_processing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/code/www/home/views.py", line 59, in single_course_processing
+    jst_course_credits = JST_Courses_Credits()#creating object where I will store JST courses and there total transferable credits.
+NameError: name 'JST_Courses_Credits' is not defined
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/code/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js

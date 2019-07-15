@@ -91,14 +91,11 @@ class CourseLookup:
             return ""
 
 # used in sending info to pdf
-class JST_Courses_Credits:
-    courses = {}
-
-# used in sending info to pdf
 class PDFINFO:
     selected_courses = {}
     oc_equivilance = {}
     jst_course_credits = []
+    courses = {}
 
 
 

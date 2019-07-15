@@ -5,7 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 from django.http import HttpResponseRedirect
 
-from .form import CourseForm, CourseLookup, PDFINFO, JST_Courses_Credits
+from .form import CourseForm, CourseLookup, PDFINFO
 from .render import Render
 
 from home import jstreader
@@ -56,7 +56,8 @@ def single_course_processing(request):
             data = CourseLookup().get_equivalent_courses(course_code)
             equivalent_courses = set()
             jst_course_credits_dict = {}
-            jst_course_credits = JST_Courses_Credits()#creating object where I will store JST courses and there total transferable credits.
+
+            print("data is: ", data)
 
 
             #pulling equivalent oc courses for each Millitary.
