@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+{% load static %}
+{% csrf_token %}
+<head>
+    <meta charset="utf-8">
+    <title>JST_Report</title>
+    <style type="text/css">
+        @page {
+            size: A4;
+            margin: 1cm;
+        }
+        .tables th,
+        .tables td {
+            padding: 5px;
+            vertical-align: top;
+            text-align: left;
+        }
+        .pdf_title {
+            text-align: center;
+        }
+        .pdf_title h1 {
+            font-size:15px
+        }
+        .equivilent_courses {
+            padding: 0px 64px;
+        }
+        .equivilent_courses_header {
+            padding: 0px 32px;
+        }
+        .total_credits {
+            padding: 0px 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="pdf_title">
+        <img src="http://{{ request.get_host }}{% static "pdffiles/OlivetCollegeLogo.jpg" %}" alt="OlivetCollegeLogo">
+        <h1>Olivet College Military Course Equivalency PDF</h1>
+    </div>
+
+<div class="container">
+    <div class="card">
+        <div class="tables">
+            
+            <h1>Accepted JST Courses:</h1>
+            <table id="jst_table" class="list-group">
+                <tbody>
+                        {% for queryset in data.selected_courses %} {#looping through queryset with selected jst course objects#}
+                            {% for Course in queryset.all %} {#we only want the first object in each queryset all others will be the same#}
+                                <tr><td>
+                                    {#displaying the course number and course name#}
+                                    {% if forloop.first %}
+                                        <h5>JST: {{Course.CourseNumber}} {{Course.CourseName}}</h5>
+                                        <div class="equivilent_courses_header">
+                                            <h6>Equivalent OC Courses:</h6>
+                                        </div>
+                                    {% endif %}
+
+                                    {% for oc_course in data.oc_equivilance %}
+                                        {% if oc_course.CourseNumber == Course.CourseEquivalenceNonOC %} {# there are some OC courses not in the database#}
+                                            <div class="equivilent_courses">
+                                                <p><strong>{{oc_course.CourseNumber}} {{oc_course.CourseName}}:</strong></p>
+                                                <div class="equivilent_courses_discription">
+                                                    <p><strong>Description:</strong> {{oc_course.CourseDescription}}</p>
+                                                </div>
+                                                <div class="credits">
+                                                    Credits: {{oc_course.CourseCredit}}
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                    </td></tr>
+                                    <tr><td>
+
+                                    {% if forloop.last %}{# after the last JST class is displayed we want to show total credits.#}
+                                        {% for key,value in data.jst_course_credits.items %}
+                                            {% if Course.CourseNumber == key %}
+                                                <div class="total_credits">
+                                                    Total Transferable Credits: {{value}}
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    {% endif %}
+                                    </td></tr>
+                            {% endfor %}
+                        {% endfor %}
+                </tbody>
+            </table>
+            <h1>Courses In Review:</h1>
+            <table id="jst_courses_under_review" class="list-group">
+                <tbody>
+                    <tr><td>None</td></tr>
+                </tbody>
+            </table>
+            <h1>Rejected Courses:</h1>
+            <table id="jst_rejected_courses" class="list-group">
+                <tbody>
+                    <tr><td>None</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

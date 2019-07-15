@@ -1,3 +1,6 @@
 Django>=2.0,<3.0
+Pdfminer.six>=20181108
 psycopg2>=2.7,<3.0
+xhtml2pdf>=0.2.3
+django-mathfilters>=0.4.0
 requests==2.22.0

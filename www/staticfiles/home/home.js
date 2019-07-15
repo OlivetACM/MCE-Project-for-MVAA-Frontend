@@ -25,6 +25,13 @@ function my_function(data) {
     }
 }
 
+function pdf_data_organizer(data) {
+    clean_data = JSON.parse(decode_html(data))
+    for (military_courses = 0; military_courses < clean_data.length; military_courses++) {
+        document.write("<tr><td>", clean_data[military_courses][equivalent_courses]["CourseNumber"], "</td></tr>")
+    }
+}
+
 function empty() {
     var x;
     x = document.getElementById("course_code").value;
