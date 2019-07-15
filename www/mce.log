@@ -5009,3 +5009,429 @@ WARNING:django.request:Not Found: /ping.js
 WARNING:django.request:Not Found: /ping.js
 WARNING:django.request:Not Found: /ping.js
 WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /pdf_processing
+Traceback (most recent call last):
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 25, in pdf_processing
+    JSTReader.clear_dir('documents/jst/', True)
+AttributeError: module 'home.JSTReader' has no attribute 'clear_dir'
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py changed, reloading.
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /pdf_processing
+Traceback (most recent call last):
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 25, in pdf_processing
+    JSTReader.clear_dir('documents/jst/', True)
+AttributeError: module 'home.JSTReader' has no attribute 'clear_dir'
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py changed, reloading.
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /pdf_processing
+Traceback (most recent call last):
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 25, in pdf_processing
+    JSTReader.clear_dir('documents/jst/', True)
+AttributeError: module 'home.JSTReader' has no attribute 'clear_dir'
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /pdf_processing
+Traceback (most recent call last):
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 25, in pdf_processing
+    JSTReader.clear_dir('documents/jst/', True)
+AttributeError: module 'home.JSTReader' has no attribute 'clear_dir'
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /pdf_processing
+Traceback (most recent call last):
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 25, in pdf_processing
+    JSTReader.clear_dir('documents/jst/', True)
+AttributeError: module 'home.JSTReader' has no attribute 'clear_dir'
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /pdf_processing
+Traceback (most recent call last):
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 25, in pdf_processing
+    JSTReader.clear_dir('documents/jst/', True)
+AttributeError: module 'home.JSTReader' has no attribute 'clear_dir'
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /pdf_processing
+Traceback (most recent call last):
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/utils/datastructures.py", line 78, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'myfile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 21, in pdf_processing
+    if request.method == 'POST' and request.FILES['myfile']:
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/utils/datastructures.py", line 80, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'myfile'
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /pdf_processing
+Traceback (most recent call last):
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 25, in pdf_processing
+    JSTReader.clear_dir('documents/jst/', True)
+AttributeError: module 'home.JSTReader' has no attribute 'clear_dir'
+ERROR:django.request:Internal Server Error: /pdf_processing
+Traceback (most recent call last):
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 25, in pdf_processing
+    JSTReader.clear_dir('documents/jst/', True)
+AttributeError: module 'home.JSTReader' has no attribute 'clear_dir'
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /pdf_processing
+Traceback (most recent call last):
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 25, in pdf_processing
+    jstreader.clear_dir('documents/jst/', True)
+AttributeError: module 'home.jstreader' has no attribute 'clear_dir'
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /pdf_processing
+Traceback (most recent call last):
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 25, in pdf_processing
+    JSTReader.clear_dir('documents/jst/', True)
+AttributeError: module 'home.JSTReader' has no attribute 'clear_dir'
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /pdf_processing
+Traceback (most recent call last):
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 25, in pdf_processing
+    JSTReader.clear_dir('documents/jst/', True)
+TypeError: clear_dir() missing 1 required positional argument: 'mkdir'
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /pdf_processing
+Traceback (most recent call last):
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 27, in pdf_processing
+    jst_dict = JSTReader.scan_pdf('documents/jst/' + myfile.name)
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py", line 49, in scan_pdf
+    files = os.listdir(directory)
+NotADirectoryError: [Errno 20] Not a directory: 'documents/jst/C.Mott_JST_1.7.19.pdf'
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /pdf_processing
+Traceback (most recent call last):
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 27, in pdf_processing
+    jst_dict = JSTReader.scan_pdf('documents/jst/')
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py", line 57, in scan_pdf
+    a = self.convert_pdf_to_txt(pdf).strip().split("\n")
+NameError: name 'self' is not defined
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /pdf_processing
+Traceback (most recent call last):
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 27, in pdf_processing
+    jst_dict = JSTReader.scan_pdf('documents/jst/')
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py", line 57, in scan_pdf
+    a = convert_pdf_to_txt(pdf).strip().split("\n")
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py", line 30, in convert_pdf_to_txt
+    fp = open(path, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C.Mott_JST_1.7.19.pdf'
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /pdf_processing
+Traceback (most recent call last):
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 27, in pdf_processing
+    jst_dict = JSTReader.scan_pdf('documents/jst/')
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py", line 58, in scan_pdf
+    a = convert_pdf_to_txt(pdf).strip().split("\n")
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py", line 30, in convert_pdf_to_txt
+    fp = open(path, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C.Mott_JST_1.7.19.pdf'
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /pdf_processing
+Traceback (most recent call last):
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 27, in pdf_processing
+    jst_dict = JSTReader.scan_pdf('documents/jst/')
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py", line 62, in scan_pdf
+    a = convert_pdf_to_txt(pdf).strip().split("\n")
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py", line 32, in convert_pdf_to_txt
+    fp = open(path, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C.Mott_JST_1.7.19.pdf'
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /pdf_processing
+Traceback (most recent call last):
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 27, in pdf_processing
+    jst_dict = JSTReader.scan_pdf('documents/jst/')
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py", line 64, in scan_pdf
+    a = convert_pdf_to_txt(pdf).strip().split("\n")
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py", line 32, in convert_pdf_to_txt
+    fp = open(path, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C.Mott_JST_1.7.19.pdf'
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py changed, reloading.
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py changed, reloading.
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /pdf_processing
+Traceback (most recent call last):
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 25, in pdf_processing
+    JSTReader().clear_dir('documents/jst/', True)
+TypeError: 'module' object is not callable
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /pdf_processing
+Traceback (most recent call last):
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 22, in pdf_processing
+    jstreader = JSTReader()
+TypeError: 'module' object is not callable
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /pdf_processing
+Traceback (most recent call last):
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 22, in pdf_processing
+    jstreader = JSTReader.JSTReader()
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py", line 16, in __init__
+    self.dir = directory
+NameError: name 'self' is not defined
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/JSTReader.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+ERROR:django.request:Internal Server Error: /pdf_processing
+Traceback (most recent call last):
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py", line 22, in pdf_processing
+    jstreader = JSTReader.JSTReader()
+TypeError: __init__() missing 1 required positional argument: 'directory'
+INFO:django.utils.autoreload:/home/ryan/Documents/mce-website/MCE-Project-for-MVAA-Frontend/www/home/views.py changed, reloading.
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js
+WARNING:django.request:Not Found: /ping.js

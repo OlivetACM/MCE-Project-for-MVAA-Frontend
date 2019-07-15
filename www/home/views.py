@@ -7,7 +7,7 @@ from django.http import HttpResponseRedirect
 
 from .form import CourseForm, CourseLookup
 
-from home import jstreader
+from home import JSTReader
 
 
 @csrf_exempt
@@ -19,15 +19,16 @@ def index(request):
 @csrf_exempt
 def pdf_processing(request):
     if request.method == 'POST' and request.FILES['myfile']:
+        jstreader = JSTReader.JSTReader('documents/jst/')
         # try:
         myfile = request.FILES['myfile']
         fs = FileSystemStorage()
         jstreader.clear_dir('documents/jst/', True)
         fs.save("documents/jst/{}".format(myfile.name), myfile)
-        jst_list = jstreader.grab_jst_courses('documents/jst/', myfile.name)
+        jst_dict = jstreader.scan_pdf()
         course_lookup = CourseLookup()
 
-        data = str(course_lookup.get_equivalent_courses(jst_list)).replace("'", '"').replace("None", "null")
+        data = str(course_lookup.get_equivalent_courses(jst_dict['accepted'])).replace("'", '"').replace("None", "null")
         
         request.session['processed_data'] = data
         return HttpResponseRedirect('/results')
