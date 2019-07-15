@@ -25,8 +25,6 @@ class CourseLookup:
                 database_result["MetaData"] = {"ApprovedCredits": self.number_of_approved_credits,
                                                "NumberOfJSTCourses": len(requested_courses),
                                                "NumberOfOCCourses": self.number_of_oc_courses}
-
-        print(database_result)
         return database_result
 
     def search_database(self, course_number):

@@ -25,10 +25,10 @@ def pdf_processing(request):
         jstreader.clear_dir('documents/jst/', True)
         fs.save("documents/jst/{}".format(myfile.name), myfile)
         jst_list = jstreader.grab_jst_courses('documents/jst/', myfile.name)
-        print(jst_list)
         course_lookup = CourseLookup()
 
         data = str(course_lookup.get_equivalent_courses(jst_list)).replace("'", '"').replace("None", "null")
+        
         request.session['processed_data'] = data
         return HttpResponseRedirect('/results')
         # except FileNotFoundError:
@@ -36,7 +36,6 @@ def pdf_processing(request):
     else:
         response = "Your request could not be processed, please try again later."
 
-    print(response)
     return render_to_response('error.html', {'response': response}, RequestContext(request))
 
 
@@ -47,9 +46,13 @@ def single_course_processing(request):
         courses = []
         if form.is_valid():
             course_code = form.cleaned_data['course_code']
-            courses.append(course_code)
+            textbox_course = [form.cleaned_data['course_code_text']]
+            
+            course_code.append(textbox_course[0])
 
-            data = str(CourseLookup().get_equivalent_courses(courses)).replace("'", '"').replace("None", "null")
+
+            course_code.sort()
+            data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
             request.session['processed_data'] = data
             return HttpResponseRedirect('/results')
 
