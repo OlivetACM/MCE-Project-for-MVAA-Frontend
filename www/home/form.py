@@ -32,8 +32,8 @@ class CourseForm(forms.Form):
 
 class CourseLookup:
     def __init__(self):
-        self.number_of_oc_courses = 0
-        self.number_of_approved_credits = 0
+        self.number_of_oc_courses = 0.0
+        self.number_of_approved_credits = 0.0
 
     """ !!!!get_equivalent_courses and search_database have been modifies to send to pdf check older version to see
         how to send information to results page.!!!!
@@ -65,7 +65,7 @@ class CourseLookup:
                     database_result.append(data)
         return database_result
 
-
+    #used to search the database for jst courses.
     def search_database_object(self, course_number, equivalant_check=False):
         database_data = Course.objects.filter(CourseNumber=course_number, CourseEquivalenceNonOC__isnull=equivalant_check)
         if equivalant_check == True:
@@ -74,6 +74,7 @@ class CourseLookup:
             
         return database_data
 
+    # used to get a course object.
     def get_course(self, course_code):
         try:
             return Course.objects.get(CourseNumber=course_code)
