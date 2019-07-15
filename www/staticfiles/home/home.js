@@ -5,7 +5,7 @@ function decode_html(html) {
 }
 
 function my_function(data) {
-    clean_data = JSON.parse(decode_html(data))
+    clean_data = JSON.parse(decode_html(data))["Data"]
 
     for (military_courses = 0; military_courses < clean_data.length; military_courses++) {
         document.write('<hr style="border: 2px solid#5b9aa0;" /><br>')
