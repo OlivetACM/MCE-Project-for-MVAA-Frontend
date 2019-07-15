@@ -16,7 +16,16 @@ class JSTReader:
         self.dir = directory
         pass
 
+    def clear_dir(self, work_dir, mkdir):
+        # Empty the working directory
+        # Currently done by deleting then (if desired) making it again
+        os.system('rm -rf ' + work_dir)
+        if mkdir:
+            os.system('mkdir ' + work_dir)
+
     def convert_pdf_to_txt(self, path):
+        print('-----------------file path-------------------')
+        print(path)
         rsrcmgr = PDFResourceManager()
         retstr = StringIO()
         codec = 'utf-8'
@@ -39,17 +48,24 @@ class JSTReader:
         retstr.close()
         return text
 
-    def scan_pdf(self, directory):
+    def scan_pdf(self):
         # get the list of files from the current directory
-        files = os.listdir(directory)
+        files = os.listdir(self.dir)
 
         # filter the list of files for only pdf files
         files = [fi for fi in files if fi.endswith(".pdf")]
 
         # for each pdf
         for pdf in files:
+            print('-------------------cwd--------------------')
+            print(os.getcwd())
+            print('------------list of files------------------')
+            print(files)
+            print('------------list of pdfs found----------------------')
             print(pdf)
-            a = self.convert_pdf_to_txt(pdf).strip().split("\n")
+            print('--------------path sent to function---------------')
+            print(self.dir + pdf)
+            a = self.convert_pdf_to_txt(self.dir + pdf).strip().split("\n")
             if a:
                 # for line in a:
                 # 	print(line +"\n")
@@ -82,4 +98,6 @@ class JSTReader:
         course_dict = {}
         course_dict['accepted'] = sorted(list(accepted_courses))
         course_dict['rejected'] = sorted(list(rejected_courses))
+        print('--------------accepted courses----------------')
+        print(course_dict['accepted'])
         return course_dict
