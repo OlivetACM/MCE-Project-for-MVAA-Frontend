@@ -12,7 +12,7 @@ logging.basicConfig(filename='mce.log', level=logging.ERROR)
     """
 class CourseCodes(object):
     def __init__(self):
-        self.query = Course.objects.filter(CourseEquivalenceNonOC__isnull=False,).exclude(CourseName__exact='',CourseDescription='')
+        self.query = Course.objects.filter(CourseEquivalenceNonOC__isnull=False,).exclude(CourseName__exact='', CourseDescription__exact='')
         self.course_numbers = set()
         for i in self.query:
             self.course_numbers.add((i.CourseNumber, i.CourseNumber))
