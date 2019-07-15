@@ -58,6 +58,8 @@ def course_processing(request):
             request.session['processed_data'] = data
             request.session['selected_course_codes'] = checkbox_course_codes
 
+            print("data in course_processing is: ", data)
+
 
             return HttpResponseRedirect('/results')
 
@@ -79,7 +81,6 @@ def course_information_pdf_processing(request):
         jst_course_credits_dict = {}
 
         print("data is: ", data)
-
 
             #pulling equivalent oc courses for each Millitary.
         for sets in data:#data is a list of sets.

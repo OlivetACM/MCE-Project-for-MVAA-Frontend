@@ -12,7 +12,7 @@ logging.basicConfig(filename='mce.log', level=logging.ERROR)
     """
 class CourseCodes(object):
     def __init__(self):
-        self.query = Course.objects.filter(CourseEquivalenceNonOC__isnull=False,)
+        self.query = Course.objects.filter(CourseEquivalenceNonOC__isnull=False,).exclude(CourseName__exact='',CourseDescription='')
         self.course_numbers = set()
         for i in self.query:
             self.course_numbers.add((i.CourseNumber, i.CourseNumber))
@@ -40,10 +40,13 @@ class CourseLookup:
     """
     def get_equivalent_courses(self, requested_courses):
         database_result = {}
+        data = []
         # requested_courses = requested_courses.split(" ")   # NEEDS TO CHANGE AS LIST WILL BE `requested_courses`
         for course in requested_courses:
             data = self.search_database(course)
             if data:
+                # needs to be adapted for multi-select list.
+                # can only bee one key per dict.
                 database_result["Data"] = [data]
                 database_result["MetaData"] = {"ApprovedCredits": self.number_of_approved_credits,
                                                "NumberOfJSTCourses": len(requested_courses),
