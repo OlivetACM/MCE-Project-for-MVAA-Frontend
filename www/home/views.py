@@ -8,7 +8,7 @@ from django.http import HttpResponseRedirect
 from .form import CourseForm, CourseLookup, PDFINFO
 from .render import Render
 
-from home import jstreader
+from home import JSTReader
 
 
 @csrf_exempt
@@ -46,14 +46,14 @@ def single_course_processing(request):
         form = CourseForm(request.POST)
         courses = []
         if form.is_valid():
-            course_code = form.cleaned_data['course_code']
-            textbox_course = [form.cleaned_data['course_code_text']]
+            checkbox_course_codes = form.cleaned_data['checkbox_course_codes']
+            course_code = [form.cleaned_data['course_code']]
             
-            course_code.append(textbox_course[0])
+            checkbox_course_codes.append(course_code[0])
 
-            course_code.sort()
+            checkbox_course_codes.sort()
             #data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
-            data = CourseLookup().get_equivalent_courses(course_code)
+            data = CourseLookup().get_equivalent_course_objects(checkbox_course_codes)
             equivalent_courses = set()
             jst_course_credits_dict = {}
 
