@@ -42,7 +42,8 @@ def pdf_processing(request):
 
 
 @csrf_exempt
-def single_course_processing(request):
+def course_processing(request):
+    print("-----------course_processing------------")
     if request.method == 'POST':
         form = CourseForm(request.POST)
         courses = []
@@ -53,43 +54,55 @@ def single_course_processing(request):
             checkbox_course_codes.append(course_code[0])
 
             checkbox_course_codes.sort()
-            #data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
-            data = CourseLookup().get_equivalent_course_objects(checkbox_course_codes)
-            equivalent_courses = set()
-            jst_course_credits_dict = {}
-
-            print("data is: ", data)
+            data = str(CourseLookup().get_equivalent_courses(checkbox_course_codes)).replace("'", '"').replace("None", "null")
+            request.session['processed_data'] = data
+            request.session['selected_course_codes'] = checkbox_course_codes
 
 
-            #pulling equivalent oc courses for each Millitary.
-            for sets in data:#data is a list of sets.
-                total_credits = 0
-                current_course = sets[0]
-                for Course in sets:#sets is made up of Course Objects.
-                    current_course = Course
-                    oc_course = CourseLookup().get_course(Course.CourseEquivalenceNonOC)
-                    if oc_course != None:
-                        total_credits += float(oc_course.CourseCredit)
-                        equivalent_courses.add(oc_course)#OC courses do not have equivalant courses filled out.
-                jst_course_credits_dict[Course.CourseNumber] = total_credits
-
-            #creating pdfinfo object with to fill in the information and sent it to the PDF form created in render.py
-            pdf_info = PDFINFO()
-            pdf_info.oc_equivilance = equivalent_courses
-            pdf_info.jst_course_credits = jst_course_credits_dict
-            pdf_info.selected_courses = data
-
-            return Render.render('pdf_form.html', {'data': pdf_info, 'response':'', 'request':request})
-            #request.session['processed_data'] = data
-            #return HttpResponseRedirect('/result')
+            return HttpResponseRedirect('/results')
 
     response = "Your request could not be processed, please try again later."
     return render_to_response('error.html', {'response': response}, RequestContext(request))
 
 
 @csrf_exempt
+def course_information_pdf_processing(request):
+    print("-----------course_information_pdf_processing------------")
+    if request.method =='POST':
+        course_codes = request.session.get('selected_course_codes')
+        print("course_codes is: ", course_codes)
+
+        course_codes.sort()
+        #data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+        data = CourseLookup().get_equivalent_course_objects(course_codes)
+        equivalent_courses = set()
+        jst_course_credits_dict = {}
+
+        print("data is: ", data)
+
+
+            #pulling equivalent oc courses for each Millitary.
+        for sets in data:#data is a list of sets.
+            total_credits = 0
+            current_course = sets[0]
+            for Course in sets: #sets is made up of Course Objects.
+                current_course = Course
+                oc_course = CourseLookup().get_course(Course.CourseEquivalenceNonOC)
+                if oc_course != None:
+                    total_credits += float(oc_course.CourseCredit) # adding credits for the current jst.
+                    equivalent_courses.add(oc_course)#OC courses do not have equivalant courses filled out.
+            jst_course_credits_dict[Course.CourseNumber] = total_credits
+
+            #creating pdfinfo object with to fill in the information and sent it to the PDF form created in render.py
+        pdf_info = PDFINFO()
+        pdf_info.oc_equivilance = equivalent_courses
+        pdf_info.jst_course_credits = jst_course_credits_dict
+        pdf_info.selected_courses = data
+
+        return Render.render('pdf_form.html', {'data': pdf_info, 'response':'', 'request':request})
+
+@csrf_exempt
 def result(request):
-    return Render.render('pdf_form.html', {'data': request.session.get('processed_data'),'response':'', 'request':request})
-    #return render_to_response('results.html',
-     #                         {'data': request.session.get('processed_data'), 'response': ''},
-      #                        RequestContext(request))
+    #return Render.render('pdf_form.html', {'data': request.session.get('processed_data'),'response':'', 'request':request})
+    return render_to_response('results.html', {'data': request.session.get('processed_data'), 'response': ''},
+                             RequestContext(request))

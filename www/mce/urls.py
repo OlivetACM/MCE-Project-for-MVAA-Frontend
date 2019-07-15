@@ -35,8 +35,10 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', home_views.index, name='home'),
     url(r'^pdf_processing', home_views.pdf_processing, name='pdf_processing'),
-    url(r'^single_course_processing', home_views.single_course_processing, name='single_course_processing'),
+    url(r'^course_processing', home_views.course_processing, name='course_processing'),
+    url(r'^course_information_pdf_processing', home_views.course_information_pdf_processing, name='course_information_pdf_processing'),
     url(r'^result', home_views.result, name='result')
+
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
