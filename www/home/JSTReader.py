@@ -49,30 +49,53 @@ class JSTReader:
             filename = self.tdir + 'image-' + str(i) + '.txt'
             file_list.append(filename)
 
+        flag = True
+        b = None
+        last_b = b
         for i in range(0, num - 1):
             filename = self.tdir + 'image-' + str(i) + '.txt'
-            b = None
-            last_b = b
-            for line in open(filename):
-                # print(courses)
-                if line == "Military Experience":
-                    break
-                if line == "":
-                    continue
-                if line != "Military Experience":
-                    if re.match(r'([A-Z]+-[0-9]+-[0-9]+)', line):
-                        b = re.findall(r'([A-Z]+-[0-9]+-[0-9]+)', line)
-                        last_b = b[0]
-                if line == "Credit Is Not Recommended":
-                    # print("No credit: ", last_b)
-                    if last_b in accepted_courses:
-                        accepted_courses.remove(last_b)
-                    rejected_courses.add(last_b)
-                if b is not None:
-                    # print("b: ", b)
-                    # print("last_b: ", last_b)
-                    accepted_courses.add(last_b)
-                    b = None
+            
+            # print('----------filename------------')
+            # print(filename)
+            # print('------------flag---------------')
+            # print(flag)
+            if flag:
+                for line in open(filename):
+                    # print(courses)
+                    print('--------------LINE---------------')
+                    print(line)
+                    print(b, "            ", last_b)
+                    if "Military Experience" in line or "Other Learning Experiences" in line:
+                        flag = False
+                        break
+                    if line == "":
+                        continue
+                    if line != "Military Experience":
+                        if re.search(r'((MC|NV)-[0-9]+-[0-9]+)', line):
+                            print('--------------------- COURSE CODE MATCH IN LINE ---------------------')
+                            # print('------------ line ---------------')
+                            # print(line)
+                            b = re.findall(r'((MC|NV)-[0-9]+-[0-9]+)', line)
+                            print('----------------   b    -------------------------------')
+                            print(b)
+                            # if len(b) > 1:
+                            #     last_b = b[1]
+                            # else:
+                            last_b = b[0][0]
+                    if "Credit Is Not Recommended" in line and last_b is not None:
+                        # print("No credit: ", last_b)
+                        if last_b in accepted_courses:
+                            accepted_courses.remove(last_b)
+                        print('---------- adding to rejected: ---------------------')
+                        print(last_b)
+                        rejected_courses.add(last_b)
+                    if b is not None:
+                        # print("b: ", b)
+                        # print("last_b: ", last_b)
+                        accepted_courses.add(last_b)
+                        # print('------------------- last_b -----------')
+                        # print(last_b)
+                        b = None
         return accepted_courses, rejected_courses
 
     def convert_pdf_to_txt(self, path):
@@ -119,27 +142,30 @@ class JSTReader:
                 rejected_courses = set()
                 b = None
                 last_b = b
-                for line in a:
-                    # print(courses)
-                    # the inside of this loop is used twice - could put in a function somewhere somehow
-                    if line == "Military Experience":
-                        break
-                    if line == "":
-                        continue
-                    if line != "Military Experience":
-                        if re.match(r'([A-Z]+-[0-9]+-[0-9]+)', line):
-                            b = re.findall(r'([A-Z]+-[0-9]+-[0-9]+)', line)
-                            last_b = b[0]
-                    if line == "Credit Is Not Recommended":
-                        # print("No credit: ", last_b)
-                        if last_b in accepted_courses:
-                            accepted_courses.remove(last_b)
-                        rejected_courses.add(last_b)
-                    if b is not None:
-                        # print("b: ", b)
-                        # print("last_b: ", last_b)
-                        accepted_courses.add(last_b)
-                        b = None
+                flag = True
+                if flag:
+                    for line in a:
+                        # print(courses)
+                        # the inside of this loop is used twice - could put in a function somewhere somehow
+                        if line == "Military Experience" or line == "Other Learning Experiences":
+                            flag = False
+                            break
+                        if line == "":
+                            continue
+                        if line != "Military Experience":
+                            if re.match(r'([A-Z]+-[0-9]+-[0-9]+)', line):
+                                b = re.findall(r'([A-Z]+-[0-9]+-[0-9]+)', line)
+                                last_b = b[0]
+                        if line == "Credit Is Not Recommended":
+                            # print("No credit: ", last_b)
+                            if last_b in accepted_courses:
+                                accepted_courses.remove(last_b)
+                            rejected_courses.add(last_b)
+                        if b is not None:
+                            # print("b: ", b)
+                            # print("last_b: ", last_b)
+                            accepted_courses.add(last_b)
+                            b = None
 
                 course_dict = {}
                 course_dict['accepted'] = sorted(list(accepted_courses))
@@ -148,6 +174,10 @@ class JSTReader:
                 print('------------------image-based PDF, running conversion------------------------')
                 self.convert_to_image(pdf)
                 accepted_courses, rejected_courses = self.scan_image()
+                print('---------accepted courses----------')
+                print(accepted_courses)
+                print('------------rejected courses -----------')
+                print(rejected_courses)
                 course_dict = {}
                 course_dict['accepted'] = sorted(list(accepted_courses))
                 course_dict['rejected'] = sorted(list(rejected_courses))
