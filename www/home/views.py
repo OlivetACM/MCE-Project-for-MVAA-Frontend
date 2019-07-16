@@ -25,7 +25,7 @@ def pdf_processing(request):
         # try:
         myfile = request.FILES['myfile']
         fs = FileSystemStorage()
-        jstreader.clear_dir('documents/jst/', True)
+        jstreader.clear_dir(True)
         fs.save("documents/jst/{}".format(myfile.name), myfile)
         jst_dict = jstreader.scan_pdf()
         course_lookup = CourseLookup()
