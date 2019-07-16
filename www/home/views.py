@@ -14,6 +14,7 @@ from home import JSTReader
 @csrf_exempt
 def index(request):
     form = CourseForm()
+    request.session['selected_course_codes'] = []
     return render_to_response('index.html', {'form': form, 'data': '', 'response': ''}, RequestContext(request))
 
 
