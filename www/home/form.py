@@ -1,5 +1,6 @@
 import logging
 from django import forms
+from django.forms import formset_factory
 
 from dbadmin.models import Course
 
@@ -7,7 +8,17 @@ logging.basicConfig(filename='mce.log', level=logging.ERROR)
 
 
 class CourseForm(forms.Form):
-    course_code = forms.CharField(max_length=30)
+    name = forms.CharField(
+        label='Course Code',
+        widget=forms.TextInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Enter course code here'
+        })
+    )
+
+
+def form_factory(num_fields):
+    return formset_factory(CourseForm, extra=num_fields)
 
 
 class CourseLookup:
@@ -16,15 +27,15 @@ class CourseLookup:
         self.number_of_approved_credits = 0
 
     def get_equivalent_courses(self, requested_courses):
-        database_result = {}
+        database_result = {'Data': []}
         # requested_courses = requested_courses.split(" ")   # NEEDS TO CHANGE AS LIST WILL BE `requested_courses`
+        i = 0
         for course in requested_courses:
             data = self.search_database(course)
             if data:
-                database_result["Data"] = [data]
-                database_result["MetaData"] = {"ApprovedCredits": self.number_of_approved_credits,
-                                               "NumberOfJSTCourses": len(requested_courses),
-                                               "NumberOfOCCourses": self.number_of_oc_courses}
+                database_result['Data'].append(data)
+                i += 1
+        print(database_result)
         return database_result
 
     def search_database(self, course_number):
@@ -53,8 +64,6 @@ class CourseLookup:
                 formatted_courses["InstitutionID"] = course.InstitutionID
                 formatted_courses["ReviewerID"] = course.ReviewerID
                 combined_courses.append(formatted_courses)
-            print(combined_courses)
-            print(self.number_of_approved_credits)
             return combined_courses
 
         except IndexError as e:
