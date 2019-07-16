@@ -98,6 +98,7 @@ def course_information_pdf_processing(request):
             current_course = sets[0]
             for Course in sets: #sets is made up of Course Objects.
                 current_course = Course
+                print("current course is: ", Course.CourseNumber)
                 oc_course = CourseLookup().get_course(Course.CourseEquivalenceNonOC)
                 if oc_course != None:
                     total_credits += float(oc_course.CourseCredit) # adding credits for the current jst.
