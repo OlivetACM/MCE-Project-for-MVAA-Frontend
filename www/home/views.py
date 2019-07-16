@@ -14,7 +14,8 @@ from home import JSTReader
 @csrf_exempt
 def index(request):
     form = CourseForm()
-    request.session['selected_course_codes'] = []
+    print("--------- view index ------------")
+    print("request.session['selected_course_codes'] is: ", request.session.get('selected_course_codes'))
     return render_to_response('index.html', {'form': form, 'data': '', 'response': ''}, RequestContext(request))
 
 
@@ -33,6 +34,11 @@ def pdf_processing(request):
         data = str(course_lookup.get_equivalent_courses(jst_dict['accepted'])).replace("'", '"').replace("None", "null")
         
         request.session['processed_data'] = data
+        request.session['selected_course_codes'] = jst_dict['accepted']
+
+        print("--------- view pdf_processing ------------")
+        print("request.session['selected_course_codes'] is: ", request.session.get('selected_course_codes'))
+
         return HttpResponseRedirect('/results')
         # except FileNotFoundError:
         #     response = "The PDF you uploaded is invalid.  Please select a different file."
@@ -75,6 +81,9 @@ def course_information_pdf_processing(request):
         course_codes = request.session.get('selected_course_codes')
         print("course_codes is: ", course_codes)
 
+        print("--------- view index ------------")
+        print("request.session['selected_course_codes'] is: ", request.session.get('selected_course_codes'))
+
         course_codes.sort()
         #data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
         data = CourseLookup().get_equivalent_course_objects(course_codes)
@@ -105,6 +114,8 @@ def course_information_pdf_processing(request):
 
 @csrf_exempt
 def result(request):
+    print("--------- view result ------------")
+    print("request.session['selected_course_codes'] is: ", request.session.get('selected_course_codes'))
     #return Render.render('pdf_form.html', {'data': request.session.get('processed_data'),'response':'', 'request':request})
     return render_to_response('results.html', {'data': request.session.get('processed_data'), 'response': ''},
                              RequestContext(request))
