@@ -153,10 +153,10 @@
 
                                 <br>
 
-                                <form action="single_course_processing" method="post">
+                                <form action="course_processing" method="post">
                                     <label>Search or Select JST/AU Course Code: </label>
-                                    {{form.course_code_text}}
-                                    {% for checkbox in form.course_code %}
+                                    {{form.course_code}}
+                                    {% for checkbox in form.checkbox_course_codes %}
                                     <div class="checkbox">
                                         <label>
                                                 {{ checkbox.tag }} {{ checkbox.choice_label }}

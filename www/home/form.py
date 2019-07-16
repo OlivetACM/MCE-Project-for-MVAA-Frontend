@@ -7,24 +7,35 @@ from dbadmin.models import Course
 logging.basicConfig(filename='mce.log', level=logging.ERROR)
 
 
+"""CourseCodes is used to generate a query of Course objects where they have a 
+       equivalant Olivet course. It then creats a set and then fills it with touples
+       of Course numbers that then gets returned in the iter function
+    """
+class CourseCodes(object):
+    def __init__(self):
+        self.query = Course.objects.filter(CourseEquivalenceNonOC__isnull=False,).exclude(CourseName__exact='', CourseDescription__exact='')
+        self.course_numbers = set()
+        for i in self.query:
+            self.course_numbers.add((i.CourseNumber, i.CourseNumber))
+    def __iter__(self):
+        return iter(self.course_numbers)
+    
+    """CourseForm sets up the container that will be displayed in the html by {{form}}
+       ChoiceFields is the form template being used currently that sets up a list drop 
+       down filled with choices provided by CoursCodes. Check django docs for more 
+       information on ChoicField()
+    """
+    
 class CourseForm(forms.Form):
-    name = forms.CharField(
-        label='Course Code',
-        widget=forms.TextInput(attrs={
-            'class': 'form-control',
-            'placeholder': 'Enter course code here'
-        })
-    )
-
-
-def form_factory(num_fields):
-    return formset_factory(CourseForm, extra=num_fields)
+    course_code_choices = sorted(CourseCodes())
+    checkbox_course_codes = forms.MultipleChoiceField(choices=course_code_choices, initial='', widget=forms.CheckboxSelectMultiple(), required=False)#MultipleChoiceField() works the best with Checkboxselectmultiple()
+    course_code = forms.CharField(max_length=30, required=False)
 
 
 class CourseLookup:
     def __init__(self):
-        self.number_of_oc_courses = 0
-        self.number_of_approved_credits = 0
+        self.number_of_oc_courses = 0.0
+        self.number_of_approved_credits = 0.0
 
     def get_equivalent_courses(self, requested_courses):
         database_result = {'Data': []}
@@ -69,3 +80,59 @@ class CourseLookup:
         except IndexError as e:
             logging.error("Course was not found: ", e)
             return ""
+          
+          
+        # used for returning a list of database objects
+    def get_equivalent_course_objects(self, requested_courses):
+        database_result = []
+        for course in requested_courses:
+            if course:
+                data = self.search_database_object(course)
+                if data:
+                    database_result.append(data)
+        return database_result
+
+    #used to search the database for jst courses.
+    def search_database_object(self, course_number, equivalant_check=False):
+        database_data = Course.objects.filter(CourseNumber=course_number, CourseEquivalenceNonOC__isnull=equivalant_check)
+        if equivalant_check == True:
+            if database_data:
+                print("in search_database: ", database_data)
+            
+        return database_data
+
+    # used to get a course object.
+    def get_course(self, course_code):
+        try:
+            return Course.objects.get(CourseNumber=course_code)
+        except Exception as e:
+            print("!!!!!Course Equivalant ", course_code, " Not found In DataBase!!!!!")
+
+
+# used in sending info to pdf
+class PDFINFO:
+    selected_courses = {}
+    oc_equivilance = {}
+    jst_course_credits = []
+    courses = {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
