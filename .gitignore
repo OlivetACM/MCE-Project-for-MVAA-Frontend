@@ -7,9 +7,6 @@ __pycache__/
 # C extensions
 *.so
 
-www/mce.log
-.idea
-
 # Distribution / packaging
 .Python
 build/
