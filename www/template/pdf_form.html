@@ -46,6 +46,7 @@
             <h1>Accepted JST Courses:</h1>
             <table id="jst_table" class="list-group">
                 <tbody>
+                        {% if data.selected_courses|length == 0 %}<tr><td>None</td></tr>{% endif %}
                         {% for queryset in data.selected_courses %} {#looping through queryset with selected jst course objects#}
                             {% for Course in queryset.all %} {#we only want the first object in each queryset all others will be the same#}
                                 <tr><td>
@@ -90,10 +91,17 @@
             <h1>Courses In Review:</h1>
             <table id="jst_courses_under_review" class="list-group">
                 <tbody>
-                    <tr><td>None</td></tr>
+                    <tr><td>
+                        {% if data.review_courses|length != 0 %}<h5>JST Course Codes:</h5>{% else %}None{% endif %}
+                        <div class="equivilent_courses_header">
+                            {% for course in data.review_courses %} {#looping through queryset with selected jst course objects#}
+                                {{course}}{% if not forloop.last %}, {% else %}.{% endif %}
+                            {% endfor %}
+                        </div>
+                    </td></tr>
                 </tbody>
             </table>
-            <h1>General Elective:</h1>
+            <h1>General Elective Credits:</h1>
             <table id="jst_rejected_courses" class="list-group">
                 <tbody>
                     <tr><td>None</td></tr>
