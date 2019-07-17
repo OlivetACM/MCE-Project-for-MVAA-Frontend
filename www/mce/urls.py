@@ -37,6 +37,7 @@ urlpatterns = [
     url(r'^pdf_processing', home_views.pdf_processing, name='pdf_processing'),
     url(r'^course_processing', home_views.course_processing, name='course_processing'),
     url(r'^course_information_pdf_processing', home_views.course_information_pdf_processing, name='course_information_pdf_processing'),
+    url(r'^multiform', home_views.multi_form, name='multiform'),
     url(r'^result', home_views.result, name='result')
 
 
