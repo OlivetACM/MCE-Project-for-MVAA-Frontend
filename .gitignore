@@ -4,6 +4,7 @@ __pycache__/
 www/dbadmin/management/__pycache__/
 www/dbadmin/migrations/__pycache__/
 www/mce/__pycache__/
+www/documents/
 *.py[cod]
 *$py.class
 
