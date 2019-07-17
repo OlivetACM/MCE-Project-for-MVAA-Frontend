@@ -1,4 +1,4 @@
-multi-form<!DOCTYPE html>
+<!DOCTYPE html>
 <html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fw="http://technolutions.com/framework" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
 {% csrf_token %}
@@ -143,7 +143,7 @@ multi-form<!DOCTYPE html>
                         <div id="c_main-content" class="cr">
                             <div id="content" style="padding: 15px;">
 
-                                <form class="form-horizontal" method="POST" action="">
+                                <form class="form-horizontal" method="POST" action="course_processing">
                                 {% csrf_token %}
                                 {{ formset.management_form }}
                                 {% for form in formset %}
