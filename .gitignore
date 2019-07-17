@@ -1,6 +1,9 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 */__pycache__/
+www/dbadmin/management/__pycache__/
+www/dbadmin/migrations/__pycache__/
+www/mce/__pycache__/
 *.py[cod]
 *$py.class
 
