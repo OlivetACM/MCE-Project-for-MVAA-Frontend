@@ -91,7 +91,7 @@ def course_information_pdf_processing(request):
         print("course_codes is: ", course_codes)
 
         print("--------- view index ------------")
-        print("request.session['selected_course_codes'] is: ", request.session.get('selected_course_codes'))
+        print("request.session['selected_course_codes'] is: ", request.session.get('course_codes'))
 
         course_codes.sort()
         #data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
@@ -112,6 +112,7 @@ def course_information_pdf_processing(request):
                 print("current course is: ", Course.CourseNumber)
                 oc_course = CourseLookup().get_course(Course.CourseEquivalenceNonOC)
                 if oc_course != None:
+                    print(oc_course)
                     total_credits += float(oc_course.CourseCredit) # adding credits for the current jst.
                     equivalent_courses.add(oc_course)#OC courses do not have equivalant courses filled out.
             jst_course_credits_dict[Course.CourseNumber] = total_credits
@@ -120,8 +121,11 @@ def course_information_pdf_processing(request):
         pdf_info = PDFInfo()
         pdf_info.oc_equivalance = equivalent_courses
         pdf_info.jst_course_credits = jst_course_credits_dict
-        pdf_info.selected_courses = accepted_data
         pdf_info.review_courses = no_data
+        pdf_info.selected_courses = accepted_data
+        print(pdf_info)
+
+        return Render.render('pdf_form.html', {'data': pdf_info, 'response':'', 'request':request})
 
 @csrf_exempt
 def result(request):
