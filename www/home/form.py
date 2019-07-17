@@ -152,7 +152,7 @@ class CourseLookup:
 
 
 # used in sending info to pdf
-class PDFINFO:
+class PDFInfo:
 
 
     #Used for filling out Accepted JST Section of PDF
