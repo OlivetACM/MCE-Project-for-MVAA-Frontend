@@ -107,13 +107,10 @@ class CourseLookup:
         except IndexError as e:
             logging.error("Course was not found: ", e)
             return ""
-<<<<<<< HEAD
           
           
      # used for returning a list of database objects
-=======
 
->>>>>>> 81e76a949a33900d80a22c292799db9fc45b126a
     def get_equivalent_course_objects(self, requested_courses):
         # used for returning a list of database objects
         database_result = []
@@ -132,15 +129,11 @@ class CourseLookup:
                         no_data.append(course)
 
 
-<<<<<<< HEAD
         return database_result, courses_non_equivalence, no_data
+
+
     #used to search the database for jst courses.
     def search_database_object(self, course_number, equivalant_check=False):
-=======
-    @staticmethod
-    def search_database_object(course_number, equivalant_check=False):
-        # used to search the database for jst courses.
->>>>>>> 81e76a949a33900d80a22c292799db9fc45b126a
         database_data = Course.objects.filter(CourseNumber=course_number, CourseEquivalenceNonOC__isnull=equivalant_check)
         if equivalant_check:
             if database_data:
@@ -158,16 +151,11 @@ class CourseLookup:
             return ""
 
 
-<<<<<<< HEAD
 # used in sending info to pdf
 class PDFINFO:
 
 
     #Used for filling out Accepted JST Section of PDF
-=======
-class PDFInfo:
-    # used in sending info to pdf
->>>>>>> 81e76a949a33900d80a22c292799db9fc45b126a
     selected_courses = {}
     oc_equivalance = {}
     jst_course_credits = []

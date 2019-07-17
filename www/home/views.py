@@ -62,16 +62,9 @@ def course_processing(request):
         if form.is_valid():
             print("--------is valid --------")
             checkbox_course_codes = form.cleaned_data['checkbox_course_codes']
-<<<<<<< HEAD
-            course_code = [form.cleaned_data['course_code']]
-            
-            print("------------apending to checkbox_course_codes--------------")
-            checkbox_course_codes.append(course_code[0])
-=======
             if checkbox_course_codes:
                 checkbox_course_codes.sort()
                 courses = checkbox_course_codes
->>>>>>> 81e76a949a33900d80a22c292799db9fc45b126a
 
             else:
                 for i in request.POST:
