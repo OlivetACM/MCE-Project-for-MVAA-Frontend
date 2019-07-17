@@ -4,6 +4,7 @@ __pycache__/
 www/dbadmin/management/__pycache__/
 www/dbadmin/migrations/__pycache__/
 www/mce/__pycache__/
+www/documents/
 *.py[cod]
 *$py.class
 
@@ -61,7 +62,7 @@ coverage.xml
 # Django stuff:
 *.log
 local_settings.py
-#db.sqlite3
+db.sqlite3
 db.sqlite3-journal
 
 # Flask stuff:
