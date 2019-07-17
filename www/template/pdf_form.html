@@ -22,10 +22,10 @@
         .pdf_title h1 {
             font-size:15px
         }
-        .equivilent_courses {
+        .equivalent_courses {
             padding: 0px 64px;
         }
-        .equivilent_courses_header {
+        .equivalent_courses_header {
             padding: 0px 32px;
         }
         .total_credits {
@@ -52,16 +52,16 @@
                                     {#displaying the course number and course name#}
                                     {% if forloop.first %}
                                         <h5>JST: {{Course.CourseNumber}} {{Course.CourseName}}</h5>
-                                        <div class="equivilent_courses_header">
+                                        <div class="equivalent_courses_header">
                                             <h6>Equivalent OC Courses:</h6>
                                         </div>
                                     {% endif %}
 
-                                    {% for oc_course in data.oc_equivilance %}
+                                    {% for oc_course in data.oc_equivalance %}
                                         {% if oc_course.CourseNumber == Course.CourseEquivalenceNonOC %} {# there are some OC courses not in the database#}
-                                            <div class="equivilent_courses">
+                                            <div class="equivalent_courses">
                                                 <p><strong>{{oc_course.CourseNumber}} {{oc_course.CourseName}}:</strong></p>
-                                                <div class="equivilent_courses_discription">
+                                                <div class="equivalent_courses_discription">
                                                     <p><strong>Description:</strong> {{oc_course.CourseDescription}}</p>
                                                 </div>
                                                 <div class="credits">
