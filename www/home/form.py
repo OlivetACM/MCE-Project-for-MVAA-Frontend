@@ -76,9 +76,11 @@ class CourseLookup:
         return self.format_results(database_data)
 
     def format_results(self, database_data):
+        print("------------format_results------------")
         try:
             combined_courses = []
             for course in database_data:
+                print("-----------looking through courses -----------")
                 self.number_of_oc_courses += 1
                 formatted_courses = {}
                 formatted_courses["CourseID"] = course.CourseID
@@ -88,7 +90,10 @@ class CourseLookup:
                 formatted_courses["CourseCredit"] = course.CourseCredit
                 self.number_of_approved_credits += float(course.CourseCredit)
 
+                print("Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC) is: ", Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC))
+
                 course_equivalence_non_oc_data = Course.objects.get(CourseNumber=course.CourseEquivalenceNonOC)
+                print("course_equivalence_non_oc_data is: ", course_equivalence_non_oc_data)
                 formatted_courses["CourseEquivalenceNonOC"] = course.CourseEquivalenceNonOC
                 formatted_courses["OCCourseName"] = course_equivalence_non_oc_data.CourseName
                 formatted_courses["OCCourseDescription"] = course_equivalence_non_oc_data.CourseDescription
@@ -96,25 +101,39 @@ class CourseLookup:
                 formatted_courses["InstitutionID"] = course.InstitutionID
                 formatted_courses["ReviewerID"] = course.ReviewerID
                 combined_courses.append(formatted_courses)
+                print("----------returning in format_results-----------")
             return combined_courses
 
         except IndexError as e:
             logging.error("Course was not found: ", e)
             return ""
+          
+          
+     # used for returning a list of database objects
 
     def get_equivalent_course_objects(self, requested_courses):
         # used for returning a list of database objects
         database_result = []
+        courses_non_equivalence = []
+        no_data = []
         for course in requested_courses:
             if course:
                 data = self.search_database_object(course)
                 if data:
                     database_result.append(data)
-        return database_result
+                else:
+                    no_equivalence = self.search_database_object(course, equivalant_check=True).exclude(CourseName__exact='', CourseDescription__exact='')
+                    if no_equivalence:
+                        courses_non_equivalence.append(no_equivalence)
+                    else:
+                        no_data.append(course)
 
-    @staticmethod
-    def search_database_object(course_number, equivalant_check=False):
-        # used to search the database for jst courses.
+
+        return database_result, courses_non_equivalence, no_data
+
+
+    #used to search the database for jst courses.
+    def search_database_object(self, course_number, equivalant_check=False):
         database_data = Course.objects.filter(CourseNumber=course_number, CourseEquivalenceNonOC__isnull=equivalant_check)
         if equivalant_check:
             if database_data:
@@ -132,14 +151,20 @@ class CourseLookup:
             return ""
 
 
+# used in sending info to pdf
 class PDFInfo:
-    # used in sending info to pdf
+
+
+    #Used for filling out Accepted JST Section of PDF
     selected_courses = {}
     oc_equivalance = {}
     jst_course_credits = []
-    courses = {}
 
+    #Used for filling out Courses in review Section of PDF
+    review_courses = []
 
+    #Used for filling out General Elective Credits fo PDF
+    elective_courses = []
 
 
 
