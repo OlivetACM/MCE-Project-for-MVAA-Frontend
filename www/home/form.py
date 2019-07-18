@@ -161,7 +161,7 @@ class PDFInfo:
     jst_course_credits = []
 
     #Used for filling out Courses in review Section of PDF
-    review_courses = []
+    review_courses = {}
 
     #Used for filling out General Elective Credits fo PDF
     elective_courses = []

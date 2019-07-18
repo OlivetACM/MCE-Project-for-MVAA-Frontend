@@ -95,12 +95,12 @@ def course_information_pdf_processing(request):
 
         course_codes.sort()
         #data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
-        accepted_data, elective_data, no_data = CourseLookup().get_equivalent_course_objects(course_codes)
+        accepted_data, nonequivilant_data, no_data = CourseLookup().get_equivalent_course_objects(course_codes)
         equivalent_courses = set()
         jst_course_credits_dict = {}
 
         print("accepted_data is: ", accepted_data)
-        print("elective_data is: ", elective_data)
+        print("nonequivilant_data is: ", nonequivilant_data)
         print("no_data is: ", no_data)
 
             #pulling equivalent oc courses for each Millitary.
@@ -121,7 +121,8 @@ def course_information_pdf_processing(request):
         pdf_info = PDFInfo()
         pdf_info.oc_equivalance = equivalent_courses
         pdf_info.jst_course_credits = jst_course_credits_dict
-        pdf_info.review_courses = no_data
+        #pdf_info.review_courses['no_data'] = no_data
+        pdf_info.review_courses['no_equivilancy'] = nonequivilant_data
         pdf_info.selected_courses = accepted_data
         print(pdf_info)
 
