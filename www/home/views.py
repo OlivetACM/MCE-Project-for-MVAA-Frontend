@@ -121,8 +121,8 @@ def course_information_pdf_processing(request):
         pdf_info = PDFInfo()
         pdf_info.oc_equivalance = equivalent_courses
         pdf_info.jst_course_credits = jst_course_credits_dict
-        #pdf_info.review_courses['no_data'] = no_data
         pdf_info.review_courses['no_equivilancy'] = nonequivilant_data
+        pdf_info.review_courses['no_data'] = no_data
         pdf_info.selected_courses = accepted_data
         print(pdf_info)
 

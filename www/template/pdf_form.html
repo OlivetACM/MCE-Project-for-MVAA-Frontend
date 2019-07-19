@@ -99,16 +99,14 @@
                                 {% if key == 'no_equivilancy' %}
                                     {% for queryset in value %}
                                         {% for course in queryset %}
-                                            {{course.CourseNumber}}: {{course.CourseName}}
+                                            {{course.CourseNumber}}: {{course.CourseName}}{% if not forloop.parentloop.last %}, {% elif data.review_courses.no_data|length == 0 %}.{% else %},{% endif %}
                                         {% endfor %}
-                                        {% if not forloop.last %},{% endif %}
                                     {% endfor %}
                                 {% elif key == 'no_data' %}
                                     {% for course in value %}
                                         {{course}}{% if not forloop.last %}, {% else %}.{% endif %}
                                     {% endfor %}
                                 {% endif %}
-                                .
                             {% endfor %}
                         </div>
                     </td></tr>
