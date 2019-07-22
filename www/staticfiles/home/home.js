@@ -6,9 +6,13 @@ function decode_html(html) {
 
 function my_function(data) {
     clean_data = JSON.parse(decode_html(data))["Data"]
+    no_equivalencies = JSON.parse(decode_html(data))["NoEquivalencies"]
 
+    document.write("<br><br><strong>Accepted Courses</strong><br>")
     for (military_courses = 0; military_courses < clean_data.length; military_courses++) {
-        document.write('<hr style="border: 2px solid#5b9aa0;" /><br>')
+        if (military_courses != 0) {
+            document.write('<hr style="border: 2px solid#5b9aa0;" /><br>')
+        }
         for (equivalent_courses = 0; equivalent_courses < clean_data[military_courses].length; equivalent_courses++) {
             if (equivalent_courses == 0) {
                 document.write("JST/AU Course Number: ", clean_data[military_courses][equivalent_courses]["CourseNumber"], "<br>")
@@ -20,7 +24,13 @@ function my_function(data) {
             document.write("Course Name: ", clean_data[military_courses][equivalent_courses]["OCCourseName"], "<br>")
             document.write("Course Description: ", clean_data[military_courses][equivalent_courses]["OCCourseDescription"], "<br>")
             document.write("Approved Credits: ", clean_data[military_courses][equivalent_courses]["CourseCredit"], "<br><br>")
-
+        }
+    }
+    document.write('<hr style="border: 2px solid#5b9aa0;" /><br>')
+    document.write("<strong>Under Review</strong><br>")
+    for (non_equivalent = 0; non_equivalent < no_equivalencies.length; non_equivalent++) {
+        if (no_equivalencies[non_equivalent]) {
+            document.write(non_equivalent+1, ". ", no_equivalencies[non_equivalent], "<br>")
         }
     }
 }
@@ -32,13 +42,27 @@ function pdf_data_organizer(data) {
     }
 }
 
-function empty() {
+function empty(id) {
     var x;
-    x = document.getElementById("course_code").value;
+    x = document.getElementById(id).value;
     if (x == "") {
-        alert("Please enter a valid course code.");
+        alert("Please upload your JST in PDF format.");
         return false;
     };
+}
+
+function validate_checkboxes() {
+    var x = document.getElementsByName("checkbox_course_codes")
+    var i;
+    for (i = 0; i < x.length; i++) {
+        if (x[i].type == "checkbox") {
+            if (x[i].checked == true) {
+                return true;
+            }
+        }
+    }
+    alert("Please select at least 1 course code.")
+    return false;
 }
 
 function updateElementIndex(el, prefix, ndx) {

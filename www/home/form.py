@@ -62,13 +62,13 @@ class CourseLookup:
         self.number_of_approved_credits = 0.0
 
     def get_equivalent_courses(self, requested_courses):
-        database_result = {'Data': []}
-        i = 0
+        database_result = {'Data': [], 'NoEquivalencies': []}
         for course in requested_courses:
             data = self.search_database(course)
             if data:
                 database_result['Data'].append(data)
-                i += 1
+            else:
+                database_result['NoEquivalencies'].append(course)
         return database_result
 
     def search_database(self, course_number):

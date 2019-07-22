@@ -144,27 +144,37 @@
                     <div id="c_et-main-area" class="cr">
                         <div id="c_main-content" class="cr">
                             <div id="content" style="padding: 15px;">
+                                <div align="center" style="font-size: 50px;">
+                                    <strong>Military Credit Equivalency Evaluation Page</strong>
+                                </div>
+
+                                <div align="left">
+                                    Upload your JST or select one of our sample documents.
+                                </div>
 
                                 <form action="pdf_processing" method="post" enctype="multipart/form-data">
                                     {% csrf_token %}
-                                    <input type="file" name="myfile">
-                                    <button type="submit">Upload</button>
+                                    <input  id="myfile" name="myfile" type="file" accept="application/pdf">
+                                    <button type="submit" onclick="return empty('myfile')">Upload</button>
                                 </form>
 
                                 <br>
 
+                                <div align="left">
+                                    <br>
+                                    Select one or more of our already accepted courses.
+                                </div>
+
                                 <form action="course_processing" method="post">
-                                    <label>Search or Select JST/AU Course Code: </label>
-                                    {{form.course_code}}
                                     {% for checkbox in form.checkbox_course_codes %}
-                                    <div class="checkbox">
+                                    <div id="checkboxes" class="checkbox">
                                         <label>
                                                 {{ checkbox.tag }} {{ checkbox.choice_label }}
                                         </label>
                                     </div>
                                     {% endfor %}
-                                    
-                                    <input type="submit" value="Submit" onClick="return empty()">
+
+                                    <input type="submit" value="Submit" onclick="return validate_checkboxes()">
                                 </form>
                             </div>
                         </div>
