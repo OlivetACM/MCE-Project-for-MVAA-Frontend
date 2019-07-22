@@ -2,6 +2,11 @@
 
 import re
 import os
+import pytesseract
+from PIL import Image
+import glob
+import multiprocessing as mp
+import time
 
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 from pdfminer.converter import TextConverter
@@ -33,27 +38,53 @@ class JSTReader:
         os.system('mkdir ' + self.idir)
         os.system('(cd ' + self.idir + '; convert-im6 -density 300 ../"' + file + '" image' + '.jpg' + ')')
 
+    def convert_to_text(self, file):
+        end = len(file) - 4
+        filename = file[0:end] + '.txt'
+        filestring = pytesseract.image_to_string((Image.open(file)))
+        outputfile = open(filename, 'w')
+        outputfile.write(filestring)
+        outputfile.close()
+
     def scan_image(self):
         accepted_courses = set()
         rejected_courses = set()
         file_list = []
+        image_glob = self.idir + '*.jpg'
+        print(os.system('ls ' + self.idir))
+        print('---------------------image glob: ', image_glob, '---------------------------')
+        image_list = glob.glob(image_glob)
+        image_list.sort()
+        print('----------------image list------------------')
+        print(image_list)
 
         os.system('mkdir ' + self.tdir)
 
         num = int(os.popen('ls ' + self.idir + ' -1 | wc -l').read())
 
-        for i in range(0, num - 1):
-            read_command = '(cd ' + self.tdir + '; tesseract ../image' + '-' + str(i) + '.jpg image' + '-' + str(
-                i) + ')'
-            os.system(read_command)
-            filename = self.tdir + 'image-' + str(i) + '.txt'
-            file_list.append(filename)
+        # for i in range(0, num - 1):
+        #     os.system('cd ' + self.tdir)
+        #     imgname = '../image-' + str(i) + '.jpg'
+        #     pytesseract.image_to_string(Image.open(imgname))
+        #     # read_command = '(cd ' + self.tdir + '; tesseract ../image' + '-' + str(i) + '.jpg image' + '-' + str(
+        #     #     i) + ')'
+        #     # os.system(read_command)
+        #     filename = self.tdir + 'image-' + str(i) + '.txt'
+        #     file_list.append(filename)
+
+        pool = mp.Pool(mp.cpu_count())
+
+        pool.map(self.convert_to_text, [fn for fn in image_list])
+
+        file_list = glob.glob(self.idir + '*.txt')
+        file_list.sort()
 
         flag = True
         b = None
         last_b = b
-        for i in range(0, num - 1):
-            filename = self.tdir + 'image-' + str(i) + '.txt'
+        for filename in file_list:
+            # for i in range(0, num - 1):
+            # filename = self.tdir + 'image-' + str(i) + '.txt'
             
             # print('----------filename------------')
             # print(filename)
@@ -122,6 +153,7 @@ class JSTReader:
         return text
 
     def scan_pdf(self):
+        start_time = time.time()
         # get the list of files from the current directory
         files = os.listdir(self.dir)
 
@@ -184,5 +216,8 @@ class JSTReader:
 
         print('--------------------------course dict---------------------')
         print(course_dict)
+        end_time = time.time()
+        runtime = start_time - end_time
+        print('-------------------------------- run time: ', runtime, '---------------------------------')
         return course_dict
 
