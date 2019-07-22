@@ -2,6 +2,8 @@
 
 import re
 import os
+import pytesseract
+from PIL import Image
 
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 from pdfminer.converter import TextConverter
@@ -43,9 +45,12 @@ class JSTReader:
         num = int(os.popen('ls ' + self.idir + ' -1 | wc -l').read())
 
         for i in range(0, num - 1):
-            read_command = '(cd ' + self.tdir + '; tesseract ../image' + '-' + str(i) + '.jpg image' + '-' + str(
-                i) + ')'
-            os.system(read_command)
+            os.system('cd ' + self.tdir)
+            imgname = '../image-' + str(i) + '.jpg'
+            pytesseract.image_to_string(Image.open(imgname))
+            # read_command = '(cd ' + self.tdir + '; tesseract ../image' + '-' + str(i) + '.jpg image' + '-' + str(
+            #     i) + ')'
+            # os.system(read_command)
             filename = self.tdir + 'image-' + str(i) + '.txt'
             file_list.append(filename)
 
