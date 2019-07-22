@@ -93,7 +93,7 @@
             <table id="jst_courses_under_review" class="list-group">
                 <tbody>
                     <tr><td>
-                        {% if data.review_courses|length != 0 %}<h5>JST Course Codes:</h5>{% else %}None{% endif %}
+                        {% if data.review_courses.no_data|length != 0 or data.review_courses.no_equivilancy|length != 0%}<h5>JST Course Codes:</h5>{% else %}None{% endif %}
                         <div class="equivilent_courses_header">
                             {% for key,value in data.review_courses.items %}
                                 {% if key == 'no_equivilancy' %}
