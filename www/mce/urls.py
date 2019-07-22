@@ -23,6 +23,7 @@ from django.conf.urls import url
 from django.contrib import admin
 
 from home import views as home_views
+from home.render import Render as pdf_view
 
 # from django.conf.urls import patterns, include
 # from dbadmin.admin import admin_site
@@ -38,7 +39,9 @@ urlpatterns = [
     url(r'^course_processing', home_views.course_processing, name='course_processing'),
     url(r'^course_information_pdf_processing', home_views.course_information_pdf_processing, name='course_information_pdf_processing'),
     url(r'^multiform', home_views.multi_form, name='multiform'),
-    url(r'^result', home_views.result, name='result')
+    url(r'^result', home_views.result, name='result'),
+    url(r'^pdf', pdf_view.render, name='render')
+
 
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

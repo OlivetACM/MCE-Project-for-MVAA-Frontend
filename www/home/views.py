@@ -85,53 +85,36 @@ def course_processing(request):
 
 @csrf_exempt
 def course_information_pdf_processing(request):
-    print("-----------course_information_pdf_processing------------")
-    if request.method =='POST':
-        course_codes = request.session.get('course_codes')
-        print("course_codes is: ", course_codes)
+    course_codes = request.session.get('course_codes')
+    course_codes.sort()
+    #data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
+    accepted_data, nonequivilant_data, no_data = CourseLookup().get_equivalent_course_objects(course_codes)
+    equivalent_courses = set()
+    jst_course_credits_dict = {}
 
-        print("--------- view index ------------")
-        print("request.session['selected_course_codes'] is: ", request.session.get('course_codes'))
-
-        course_codes.sort()
-        #data = str(CourseLookup().get_equivalent_courses(course_code)).replace("'", '"').replace("None", "null")
-        accepted_data, nonequivilant_data, no_data = CourseLookup().get_equivalent_course_objects(course_codes)
-        equivalent_courses = set()
-        jst_course_credits_dict = {}
-
-        print("accepted_data is: ", accepted_data)
-        print("nonequivilant_data is: ", nonequivilant_data)
-        print("no_data is: ", no_data)
-
-            #pulling equivalent oc courses for each Millitary.
-        for sets in accepted_data:#data is a list of sets.
-            total_credits = 0
-            current_course = sets[0]
-            for Course in sets: #sets is made up of Course Objects.
-                current_course = Course
-                print("current course is: ", Course.CourseNumber)
-                oc_course = CourseLookup().get_course(Course.CourseEquivalenceNonOC)
-                if oc_course != None:
-                    print(oc_course)
-                    total_credits += float(oc_course.CourseCredit) # adding credits for the current jst.
-                    equivalent_courses.add(oc_course)#OC courses do not have equivalant courses filled out.
-            jst_course_credits_dict[Course.CourseNumber] = total_credits
+        #pulling equivalent oc courses for each Millitary.
+    for sets in accepted_data:#data is a list of sets.
+        total_credits = 0
+        current_course = sets[0]
+        for Course in sets: #sets is made up of Course Objects.
+            current_course = Course
+            oc_course = CourseLookup().get_course(Course.CourseEquivalenceNonOC)
+            if oc_course != None:
+                print(oc_course)
+                total_credits += float(oc_course.CourseCredit) # adding credits for the current jst.
+                equivalent_courses.add(oc_course)#OC courses do not have equivalant courses filled out.
+        jst_course_credits_dict[Course.CourseNumber] = total_credits
 
             #creating pdfinfo object with to fill in the information and sent it to the PDF form created in render.py
-        pdf_info = PDFInfo()
-        pdf_info.oc_equivalance = equivalent_courses
-        pdf_info.jst_course_credits = jst_course_credits_dict
-        pdf_info.review_courses['no_equivilancy'] = nonequivilant_data
-        pdf_info.review_courses['no_data'] = no_data
-        pdf_info.selected_courses = accepted_data
-        print(pdf_info)
-
-        return Render.render('pdf_form.html', {'data': pdf_info, 'response':'', 'request':request})
+    pdf_info = PDFInfo()
+    pdf_info.oc_equivalance = equivalent_courses
+    pdf_info.jst_course_credits = jst_course_credits_dict
+    pdf_info.review_courses['no_equivilancy'] = nonequivilant_data
+    pdf_info.review_courses['no_data'] = no_data
+    pdf_info.selected_courses = accepted_data
+    return Render.render('pdf_form.html', {'data': pdf_info, 'response':'', 'request':request})
 
 @csrf_exempt
 def result(request):
-    print("--------- view result ------------")
-    print("request.session['course_codes'] is: ", request.session.get('course_codes'))
-    #return Render.render('pdf_form.html', {'data': request.session.get('processed_data'),'response':'', 'request':request})
     return render_to_response('results.html', {'data': request.session.get('processed_data'), 'response': ''},
                              RequestContext(request))
