@@ -51,12 +51,12 @@ class JSTReader:
         rejected_courses = set()
         file_list = []
         image_glob = self.idir + '*.jpg'
-        print(os.system('ls ' + self.idir))
-        print('---------------------image glob: ', image_glob, '---------------------------')
+        # print(os.system('ls ' + self.idir))
+        # print('---------------------image glob: ', image_glob, '---------------------------')
         image_list = glob.glob(image_glob)
         image_list.sort()
-        print('----------------image list------------------')
-        print(image_list)
+        # print('----------------image list------------------')
+        # print(image_list)
 
         os.system('mkdir ' + self.tdir)
 
@@ -93,9 +93,9 @@ class JSTReader:
             if flag:
                 for line in open(filename):
                     # print(courses)
-                    print('--------------LINE---------------')
-                    print(line)
-                    print(b, "            ", last_b)
+                    # print('--------------LINE---------------')
+                    # print(line)
+                    # print(b, "            ", last_b)
                     if "Military Experience" in line or "Other Learning Experiences" in line:
                         flag = False
                         break
@@ -103,12 +103,12 @@ class JSTReader:
                         continue
                     if line != "Military Experience":
                         if re.search(r'((MC|NV)-[0-9]+-[0-9]+)', line):
-                            print('--------------------- COURSE CODE MATCH IN LINE ---------------------')
+                            # print('--------------------- COURSE CODE MATCH IN LINE ---------------------')
                             # print('------------ line ---------------')
                             # print(line)
                             b = re.findall(r'((MC|NV)-[0-9]+-[0-9]+)', line)
-                            print('----------------   b    -------------------------------')
-                            print(b)
+                            # print('----------------   b    -------------------------------')
+                            # print(b)
                             # if len(b) > 1:
                             #     last_b = b[1]
                             # else:
@@ -117,8 +117,8 @@ class JSTReader:
                         # print("No credit: ", last_b)
                         if last_b in accepted_courses:
                             accepted_courses.remove(last_b)
-                        print('---------- adding to rejected: ---------------------')
-                        print(last_b)
+                        # print('---------- adding to rejected: ---------------------')
+                        # print(last_b)
                         rejected_courses.add(last_b)
                     if b is not None:
                         # print("b: ", b)
@@ -163,8 +163,8 @@ class JSTReader:
         # for each pdf
         for pdf in files:
             a = self.convert_pdf_to_txt(self.dir + pdf).strip().split("\n")
-            print('------------a value--------------')
-            print(a)
+            # print('------------a value--------------')
+            # print(a)
             if len(a[0]) > 0:
                 print('----------------------------text-based PDF, running as normal--------------------')
                 # for line in a:
@@ -204,20 +204,24 @@ class JSTReader:
                 course_dict['rejected'] = sorted(list(rejected_courses))
             else:  # OCR route
                 print('------------------image-based PDF, running conversion------------------------')
+                conv_start = time.time()
                 self.convert_to_image(pdf)
+                conv_end = time.time()
+                conv_time = conv_end - conv_start
+                print('------------- Conversion finished, run time: ', conv_time, '------------------')
                 accepted_courses, rejected_courses = self.scan_image()
-                print('---------accepted courses----------')
-                print(accepted_courses)
-                print('------------rejected courses -----------')
-                print(rejected_courses)
+                # print('---------accepted courses----------')
+                # print(accepted_courses)
+                # print('------------rejected courses -----------')
+                # print(rejected_courses)
                 course_dict = {}
                 course_dict['accepted'] = sorted(list(accepted_courses))
                 course_dict['rejected'] = sorted(list(rejected_courses))
 
-        print('--------------------------course dict---------------------')
-        print(course_dict)
+        # print('--------------------------course dict---------------------')
+        # print(course_dict)
         end_time = time.time()
-        runtime = start_time - end_time
-        print('-------------------------------- run time: ', runtime, '---------------------------------')
+        runtime = end_time - start_time
+        print('-------------------------------- total run time: ', runtime, '---------------------------------')
         return course_dict
 
