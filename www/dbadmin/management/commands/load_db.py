@@ -15,7 +15,7 @@ class Command(BaseCommand):
         curs.execute('select * from Course')
         for row in curs:
             obj = Course.objects.create(
-                CourseID=row[0],
+                #CourseID=row[0],
                 CourseNumber=row[1],
                 CourseName=row[2],
                 CourseDescription=row[3],
@@ -28,14 +28,14 @@ class Command(BaseCommand):
         curs.execute('select * from Outcome')
         for row in curs:
             obj2 = Outcome.objects.create(
-                OutcomeID=row[0],
+                #OutcomeID=row[0],
                 OutcomeDescription=row[1],
                 CourseNumber=row[2]
             )
         curs.execute('select * from Reviewer')
         for row in curs:
             obj3 = Reviewer.objects.create(
-                ReviewerID=row[0],
+                #ReviewerID=row[0],
                 ReviewerName=row[1],
                 ReviewerPhone=row[2],
                 ReviewerEmail=row[3],
@@ -44,7 +44,7 @@ class Command(BaseCommand):
         curs.execute('select * from Institution')
         for row in curs:
             obj4 = Institution.objects.create(
-                InstitutionID=row[0],
+                #InstitutionID=row[0],
                 InstitutionName=row[1],
                 InstitutionAddress=row[2],
                 InstitutionCity=row[3],

@@ -5,7 +5,7 @@ from django.db import models
 
 # Models made from fields in the mce.sqlite3 database
 class Course(models.Model):
-    CourseID = models.IntegerField()
+    #CourseID = models.IntegerField()
     CourseNumber = models.CharField(max_length=128)
     CourseName = models.CharField(max_length=128)
     CourseDescription = models.CharField(max_length=8192)
@@ -22,13 +22,13 @@ class Course(models.Model):
     ReviewerID = models.IntegerField(null=True, blank=True)
 
 class Outcome(models.Model):
-    OutcomeID = models.IntegerField()
+    #OutcomeID = models.IntegerField()
     OutcomeDescription = models.CharField(max_length=1024)
     CourseNumber = models.CharField(max_length=128)
 
 
 class Reviewer(models.Model):
-    ReviewerID = models.IntegerField()
+    #ReviewerID = models.IntegerField()
     ReviewerName = models.CharField(max_length=128)
     ReviewerPhone = models.CharField(max_length=16)
     ReviewerEmail = models.CharField(max_length=128)
@@ -36,7 +36,7 @@ class Reviewer(models.Model):
 
 
 class Institution(models.Model):
-    InstitutionID = models.IntegerField()
+    #InstitutionID = models.IntegerField()
     InstitutionName = models.CharField(max_length=128)
     InstitutionAddress = models.CharField(max_length=256)
     InstitutionCity = models.CharField(max_length=128)

@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
             name='Outcomes',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('OutcomeID', models.IntegerField()),
+                #('OutcomeID', models.IntegerField()),
                 ('OutcomeDescription', models.CharField(max_length=1024)),
                 ('CourseNumber', models.CharField(max_length=128)),
             ],
@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
             name='Reviewer',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('ReviewerID', models.IntegerField()),
+                #('ReviewerID', models.IntegerField()),
                 ('ReviewerName', models.CharField(max_length=128)),
                 ('ReviewerPhone', models.CharField(max_length=16)),
                 ('ReviewerEmail', models.CharField(max_length=128)),

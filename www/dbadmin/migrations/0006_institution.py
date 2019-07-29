@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
             name='Institution',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('InstitutionID', models.IntegerField()),
+                #('InstitutionID', models.IntegerField()),
                 ('InstitutionName', models.CharField(max_length=128)),
                 ('InstitutionAddress', models.CharField(max_length=256)),
                 ('InstitutionCity', models.CharField(max_length=128)),

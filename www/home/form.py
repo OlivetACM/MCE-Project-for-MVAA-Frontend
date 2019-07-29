@@ -83,7 +83,7 @@ class CourseLookup:
                 print("-----------looking through courses -----------")
                 self.number_of_oc_courses += 1
                 formatted_courses = {}
-                formatted_courses["CourseID"] = course.CourseID
+                #formatted_courses["CourseID"] = course.CourseID
                 formatted_courses["CourseNumber"] = course.CourseNumber
                 formatted_courses["CourseName"] = course.CourseName
                 formatted_courses["CourseDescription"] = course.CourseDescription

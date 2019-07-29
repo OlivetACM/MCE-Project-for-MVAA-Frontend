@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             name='Course',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('CourseID', models.IntegerField()),
+                #('CourseID', models.IntegerField()),
                 ('CourseNumber', models.CharField(max_length=128)),
                 ('CourseName', models.CharField(max_length=128)),
                 ('CourseDescription', models.CharField(max_length=8192)),
