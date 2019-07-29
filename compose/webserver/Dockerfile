@@ -5,6 +5,6 @@ COPY . /code/
 WORKDIR /code/www
 
 RUN apt update
-RUN apt install -y imagemagick tesseract-ocr libtesseract-dev ghostscript
+RUN apt install -y imagemagick tesseract-ocr libtesseract-dev ghostscript poppler-utils
 
 RUN pip install -r ../requirements.txt

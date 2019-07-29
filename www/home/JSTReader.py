@@ -7,6 +7,8 @@ from PIL import Image
 import glob
 import multiprocessing as mp
 import time
+from pdf2image import convert_from_path, convert_from_bytes
+from pdf2image.exceptions import PDFSyntaxError, PDFPageCountError, PDFInfoNotInstalledError
 
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 from pdfminer.converter import TextConverter
@@ -19,7 +21,6 @@ class JSTReader:
 
     def __init__(self, directory):
         self.dir = directory  # base directory, where JST is uploaded/stored
-        # self.wdir = self.dir + 'working/'  # working directory
         self.idir = self.dir + 'images/'  # image directory
         self.tdir = self.idir + 'text/'  # text file directory
         pass
@@ -32,13 +33,28 @@ class JSTReader:
             os.system('mkdir ' + self.dir)
 
     def convert_to_image(self, file):
-        # Convert the jst file (presumably PDF) into an image (jpg) using imagemagick
-        # Command for imagemagick version 6 is "convert-im6 inputfile -density (value) outputfile"
-        # Higher density for higher quality, up to a certain point. Will take longer to run at higher values of course
+        # new conversion function using pdf2image
+        filedir = self.dir + file
+        # dpi=300 seems to be the sweet spot
+        # using mp.cpu_count() for thread count allows us to multithread without using too many threads
+        images = convert_from_path(filedir, dpi=300, thread_count=mp.cpu_count())
+
         os.system('mkdir ' + self.idir)
-        os.system('(cd ' + self.idir + '; convert-im6 -density 300 ../"' + file + '" image' + '.jpg' + ')')
+        index = 0
+        for image in images:
+            image.save(self.idir + "image-" + str(index) + ".jpg")
+            index += 1
+
+    # old conversion function
+    # def convert_to_image(self, file):
+    #     # Convert the jst file (presumably PDF) into an image (jpg) using imagemagick
+    #     # Command for imagemagick version 6 is "convert-im6 inputfile -density (value) outputfile"
+    #     # Higher density for higher quality, up to a certain point. Will take longer to run at higher values of course
+    #     os.system('mkdir ' + self.idir)
+    #     os.system('(cd ' + self.idir + '; convert-im6 -density 300 ../"' + file + '" image' + '.jpg' + ')')
 
     def convert_to_text(self, file):
+        # convert newly generated image files to text files using pytesseract
         end = len(file) - 4
         filename = file[0:end] + '.txt'
         filestring = pytesseract.image_to_string((Image.open(file)))
@@ -47,30 +63,15 @@ class JSTReader:
         outputfile.close()
 
     def scan_image(self):
+        # scan images following conversion from pdf
         accepted_courses = set()
         rejected_courses = set()
-        file_list = []
+        # file_list = []
         image_glob = self.idir + '*.jpg'
-        # print(os.system('ls ' + self.idir))
-        # print('---------------------image glob: ', image_glob, '---------------------------')
         image_list = glob.glob(image_glob)
         image_list.sort()
-        # print('----------------image list------------------')
-        # print(image_list)
 
         os.system('mkdir ' + self.tdir)
-
-        num = int(os.popen('ls ' + self.idir + ' -1 | wc -l').read())
-
-        # for i in range(0, num - 1):
-        #     os.system('cd ' + self.tdir)
-        #     imgname = '../image-' + str(i) + '.jpg'
-        #     pytesseract.image_to_string(Image.open(imgname))
-        #     # read_command = '(cd ' + self.tdir + '; tesseract ../image' + '-' + str(i) + '.jpg image' + '-' + str(
-        #     #     i) + ')'
-        #     # os.system(read_command)
-        #     filename = self.tdir + 'image-' + str(i) + '.txt'
-        #     file_list.append(filename)
 
         pool = mp.Pool(mp.cpu_count())
 
@@ -80,22 +81,12 @@ class JSTReader:
         file_list.sort()
 
         flag = True
-        b = None
-        last_b = b
+        # temp = None
+        add = None
+        prev = None
         for filename in file_list:
-            # for i in range(0, num - 1):
-            # filename = self.tdir + 'image-' + str(i) + '.txt'
-            
-            # print('----------filename------------')
-            # print(filename)
-            # print('------------flag---------------')
-            # print(flag)
             if flag:
                 for line in open(filename):
-                    # print(courses)
-                    # print('--------------LINE---------------')
-                    # print(line)
-                    # print(b, "            ", last_b)
                     if "Military Experience" in line or "Other Learning Experiences" in line:
                         flag = False
                         break
@@ -103,33 +94,22 @@ class JSTReader:
                         continue
                     if line != "Military Experience":
                         if re.search(r'((MC|NV)-[0-9]+-[0-9]+)', line):
-                            # print('--------------------- COURSE CODE MATCH IN LINE ---------------------')
-                            # print('------------ line ---------------')
-                            # print(line)
-                            b = re.findall(r'((MC|NV)-[0-9]+-[0-9]+)', line)
-                            # print('----------------   b    -------------------------------')
-                            # print(b)
-                            # if len(b) > 1:
-                            #     last_b = b[1]
-                            # else:
-                            last_b = b[0][0]
-                    if "Credit Is Not Recommended" in line and last_b is not None:
-                        # print("No credit: ", last_b)
-                        if last_b in accepted_courses:
-                            accepted_courses.remove(last_b)
-                        # print('---------- adding to rejected: ---------------------')
-                        # print(last_b)
-                        rejected_courses.add(last_b)
-                    if b is not None:
-                        # print("b: ", b)
-                        # print("last_b: ", last_b)
-                        accepted_courses.add(last_b)
-                        # print('------------------- last_b -----------')
-                        # print(last_b)
-                        b = None
+                            temp = re.findall(r'((MC|NV)-[0-9]+-[0-9]+)', line)
+                            add = temp[0][0]
+                    if add is not None:
+                        accepted_courses.add(add)
+                        prev = add
+                        add = None
+                    if "Credit Is Not Recommended" in line:
+                        if prev is not None:
+                            if prev in accepted_courses:
+                                accepted_courses.remove(prev)
+                            rejected_courses.add(prev)
+                            prev = None
         return accepted_courses, rejected_courses
 
     def convert_pdf_to_txt(self, path):
+        # read text-based pdf
         rsrcmgr = PDFResourceManager()
         retstr = StringIO()
         codec = 'utf-8'
@@ -163,12 +143,8 @@ class JSTReader:
         # for each pdf
         for pdf in files:
             a = self.convert_pdf_to_txt(self.dir + pdf).strip().split("\n")
-            # print('------------a value--------------')
-            # print(a)
             if len(a[0]) > 0:
-                print('----------------------------text-based PDF, running as normal--------------------')
-                # for line in a:
-                # 	print(line +"\n")
+                # print('----------------------------text-based PDF, running as normal--------------------')
 
                 accepted_courses = set()
                 rejected_courses = set()
@@ -177,7 +153,6 @@ class JSTReader:
                 flag = True
                 if flag:
                     for line in a:
-                        # print(courses)
                         # the inside of this loop is used twice - could put in a function somewhere somehow
                         if line == "Military Experience" or line == "Other Learning Experiences":
                             flag = False
@@ -188,14 +163,11 @@ class JSTReader:
                             if re.match(r'([A-Z]+-[0-9]+-[0-9]+)', line):
                                 b = re.findall(r'([A-Z]+-[0-9]+-[0-9]+)', line)
                                 last_b = b[0]
-                        if line == "Credit Is Not Recommended":
-                            # print("No credit: ", last_b)
+                        if "Credit Is Not Recommended" in line:
                             if last_b in accepted_courses:
                                 accepted_courses.remove(last_b)
                             rejected_courses.add(last_b)
                         if b is not None:
-                            # print("b: ", b)
-                            # print("last_b: ", last_b)
                             accepted_courses.add(last_b)
                             b = None
 
@@ -210,16 +182,10 @@ class JSTReader:
                 conv_time = conv_end - conv_start
                 print('------------- Conversion finished, run time: ', conv_time, '------------------')
                 accepted_courses, rejected_courses = self.scan_image()
-                # print('---------accepted courses----------')
-                # print(accepted_courses)
-                # print('------------rejected courses -----------')
-                # print(rejected_courses)
                 course_dict = {}
                 course_dict['accepted'] = sorted(list(accepted_courses))
                 course_dict['rejected'] = sorted(list(rejected_courses))
 
-        # print('--------------------------course dict---------------------')
-        # print(course_dict)
         end_time = time.time()
         runtime = end_time - start_time
         print('-------------------------------- total run time: ', runtime, '---------------------------------')
