@@ -6,3 +6,4 @@ django-mathfilters>=0.4.0
 requests==2.22.0
 pytesseract==0.2.7
 pdf2image==1.6.0
+django-adminplus==0.5

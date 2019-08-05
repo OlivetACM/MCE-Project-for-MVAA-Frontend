@@ -27,7 +27,10 @@ from home.render import Render as pdf_view
 
 # from django.conf.urls import patterns, include
 # from dbadmin.admin import admin_site
+from django.contrib import admin
+from adminplus.sites import AdminSitePlus
 
+admin.site = admin.sites.site = AdminSitePlus()
 admin.site.site_header = 'Database Administration - Olivet Military Course Equivalency'
 admin.site.index_title = 'Olivet MCE Database'
 admin.autodiscover()
