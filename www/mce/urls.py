@@ -28,14 +28,18 @@ from home.render import Render as pdf_view
 # from django.conf.urls import patterns, include
 # from dbadmin.admin import admin_site
 from django.contrib import admin
+from django.views.generic.base import TemplateView
 from adminplus.sites import AdminSitePlus
 
+
+
 admin.site = admin.sites.site = AdminSitePlus()
-admin.site.site_header = 'Database Administration - Olivet Military Course Equivalency'
+admin.site.site_header = 'Olivet MCE Database'
 admin.site.index_title = 'Olivet MCE Database'
 admin.autodiscover()
 
 urlpatterns = [
+    url(r'^admin/equivalency/$', TemplateView.as_view(template_name='admin/equivalency.html'), name='equivalency'),
     url(r'^admin/', admin.site.urls),
     url(r'^$', home_views.index, name='home'),
     url(r'^pdf_processing', home_views.pdf_processing, name='pdf_processing'),
@@ -44,10 +48,7 @@ urlpatterns = [
     url(r'^multiform', home_views.multi_form, name='multiform'),
     url(r'^result', home_views.result, name='result'),
     url(r'^pdf', pdf_view.render, name='render')
-
-
-
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += staticfiles_urlpatterns()
 
