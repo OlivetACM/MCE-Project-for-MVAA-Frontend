@@ -36,7 +36,7 @@ admin.site.register(Institution, InstitutionAdmin)
 
 
 # Register your models here.
-@admin.site.register_view('admin.site.equivalency', urlname='equivalency', name='Greets you with a hello')
+@admin.site.register_view('equivalency', urlname='equivalency', name='Generate Equivalency Review')
 def equivalency(request):
     context = dict(
         admin.site.each_context(request),
