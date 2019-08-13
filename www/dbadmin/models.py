@@ -14,7 +14,11 @@ class Course(models.Model):
     INSTITUTION_CHOICES = (
         (1, "Olivet"),
         (2, "KCC"),
-        (3, "Military"),
+        (3, "Army"),
+        (4, "Navy"),
+        (5, "Marines"),
+        (6, "Air Force"),
+        (7, "Coast Guard")
     )
     InstitutionID = models.IntegerField(
         choices=INSTITUTION_CHOICES,
