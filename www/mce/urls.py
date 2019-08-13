@@ -25,15 +25,23 @@ from django.contrib import admin
 from home import views as home_views
 from home.render import Render as pdf_view
 
+from adminplus.sites import AdminSitePlus
+from django.views.generic.base import TemplateView
+from django.contrib.auth.decorators import login_required
+
 # from django.conf.urls import patterns, include
 # from dbadmin.admin import admin_site
 
+admin.site = AdminSitePlus()
+admin.autodiscover()
 admin.site.site_header = 'Database Administration - Olivet Military Course Equivalency'
 admin.site.index_title = 'Olivet MCE Database'
 admin.autodiscover()
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    # must use login_required function here as well for custom views
+    url(r'^admin/equivalency/', login_required(TemplateView.as_view(template_name='admin/equivalency.html')), name='equivalency'),
     url(r'^$', home_views.index, name='home'),
     url(r'^pdf_processing', home_views.pdf_processing, name='pdf_processing'),
     url(r'^course_processing', home_views.course_processing, name='course_processing'),
