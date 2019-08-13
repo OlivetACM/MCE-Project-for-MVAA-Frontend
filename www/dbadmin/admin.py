@@ -1,6 +1,12 @@
 from django.contrib import admin
 from dbadmin.models import Course, Outcome, Reviewer, Institution
 
+from django.contrib.auth.decorators import login_required
+from django.contrib import admin
+from django.http import HttpResponse
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+
 
 # list_display = what we want shown in the admin site
 # search_fields = what we want to search by, seems to do all at once
@@ -34,3 +40,14 @@ admin.site.register(Institution, InstitutionAdmin)
 
 
 # Register your models here.
+
+# Must use login required decorator to restrict usage to admins
+@login_required()
+def equivalency(request):
+    context = dict(
+        admin.site.each_context(request),
+    )
+    return render_to_response(request, 'mce/admin/equivalency.html', context)
+
+# register the view here instead of using a decorator, as we need login_required
+admin.site.register_view('equivalency', urlname='equivalency', name='Generate Equivalency Review', view=equivalency)

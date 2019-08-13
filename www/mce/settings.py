@@ -33,14 +33,18 @@ CORS_ALLOW_CREDENTIALS = True
 
 INSTALLED_APPS = [
     'dbadmin',
-    'django.contrib.admin',
+    # 'django.contrib.admin',  # this is replace by SimpleAdminConfig below
+    'django.contrib.admin.apps.SimpleAdminConfig',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
+    'adminplus',
 ]
+
+LOGIN_URL='/admin/login/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
