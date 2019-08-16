@@ -6,110 +6,6 @@
 {% endblock %}
 {% block content %}
 <style>
-div.blueTable {
-  border: 1px solid #1C6EA4;
-  background-color: #EEEEEE;
-  width: 100%;
-  text-align: left;
-  border-collapse: collapse;
-}
-.divTable.blueTable .divTableCell, .divTable.blueTable .divTableHead {
-  border: 1px solid #AAAAAA;
-  padding: 3px 2px;
-}
-.divTable.blueTable .divTableBody .divTableCell {
-  font-size: 13px;
-}
-.divTable.blueTable .divTableRow:nth-child(even) {
-  background: #D0E4F5;
-}
-.blueTable .tableFootStyle {
-  font-size: 14px;
-}
-.blueTable .tableFootStyle .links {
-	 text-align: right;
-}
-.blueTable .tableFootStyle .links a{
-  display: inline-block;
-  background: #1C6EA4;
-  color: #FFFFFF;
-  padding: 2px 8px;
-  border-radius: 5px;
-}
-.blueTable.outerTableFooter {
-  border-top: none;
-}
-.blueTable.outerTableFooter .tableFootStyle {
-  padding: 3px 5px;
-}
-/* DivTable.com */
-.divTable{ display: table; }
-.divTableRow { display: table-row; }
-.divTableHeading { display: table-header-group;}
-.divTableCell, .divTableHead { display: table-cell;}
-.divTableHeading { display: table-header-group;}
-.divTableFoot { display: table-footer-group;}
-.divTableBody { display: table-row-group;}
-
-.custom-select {
-  position: relative;
-  font-family: Arial;
-}
-
-.custom-select select {
-  display: none; /*hide original SELECT element: */
-}
-
-.select-selected {
-  background-color: DodgerBlue;
-}
-
-/* Style the arrow inside the select element: */
-.select-selected:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
-}
-
-/* Point the arrow upwards when the select box is open (active): */
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
-}
-
-/* style the items (options), including the selected item: */
-.select-items div,.select-selected {
-  color: #ffffff;
-  padding: 8px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
-}
-
-/* Style items (options): */
-.select-items {
-  position: absolute;
-  background-color: DodgerBlue;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-}
-
-/* Hide the items when the select box is closed: */
-.select-hide {
-  display: none;
-}
-
-.select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
 
 </style>
 
@@ -118,7 +14,7 @@ div.blueTable {
 <html>
 
 <title>Generate Equivalency Review</title>
-
+<form name="generatebutton" action="" method="post" accept-charset="utf-8" >
 <div>
     <div>
         <div>
@@ -131,9 +27,9 @@ div.blueTable {
                     </select>
                 </div>
                 <div >
-                    <select id="select_course">
+                    <select onchange="display_course_selected('inst_course', 'select_course_list')" id="select_course_list" name="inst_course">
                         <option value="0">Select Course:</option>
-                        {% for course,id in data %}
+                        {% for course,id in data.0 %}
                         <option value="{{course}}">{{course}}</option>
                         {% endfor %}
                     </select>
@@ -152,9 +48,9 @@ div.blueTable {
                     </select>
                 </div>
                 <div>
-                    <select id="military_course" >
+                    <select onchange="display_course_selected('military_course', 'military_course_list')" id="military_course_list" name="military_course" >
                         <option value="0">Select Course:</option>
-                        {% for course,id in data %}
+                        {% for course,id in data.0 %}
                         <option value="{{course}}">{{course}}</option>
                         {% endfor %}
                     </select>
@@ -163,18 +59,32 @@ div.blueTable {
         </div>
     </div>
 </div>
-<form name="generatebutton" action="" method="post" accept-charset="utf-8" >
-    {% csrf_token %}
-    <button type="submit" onclick="checkselected('Please Select Courses')">GENERATE!</button>
+    <p id="inst_course" name="college_course" ></p> <p id="military_course" name="military_course" ></p>
+    <button type="submit" onclick="checkselected('Please Select Courses')" value="testing">GENERATE!</button>
 </form>
 {% load js %}
 <script>
+        function display_course_selected(para, course){
+            var display_para = document.getElementById(para);
+            var select_list_course = document.getElementById(course);
+
+            var course_codes_descriptions = {{data.1 | js}}
+            var descriptions = "";
+            var i = 0;
+            for(i = 0; i < course_codes_descriptions.length; i++){
+                if(course_codes_descriptions[i][0] == select_list_course.value){
+                    descriptions = course_codes_descriptions[i][1];
+                }
+            }
+            display_para.style = "font-size:14px";
+            display_para.innerText = select_list_course.value + ":" + descriptions;
+
+
+        }
         function checkselected(message){
-            console.log("runing checkselected");
             var form = document.getElementById('generatebutton')
-            var school_course = document.getElementById('select_course');
-            var military_course = document.getElementById('military_course');
-            console.log("runing checkselected");
+            var school_course = document.getElementById('select_course_list');
+            var military_course = document.getElementById('military_course_list');
 
             if(school_course.value == 0 ){
                 console.log("alerting user");
@@ -184,56 +94,41 @@ div.blueTable {
                 console.log("alerting user");
                 alert(message);
             }
-            else {
-                form.appendChild(school_course);
-                form.appendChild(military_course);
-                form.submit();
-                console.log("runing checkselected");
-                alert("checking what this does");
-            }
         }
         function clearList(list){
-            console.log("clearing list");
+            var display_course = document.getElementById(list.name)
             var i;
             for( i = list.options.length -1; i >= 0; i--){
                 list.remove(i);
                 }
+            display_course.innerText = ""
             }
 
         function school(){
             var school_inst = document.getElementById('select_institution').value;
-            var list = document.getElementById('select_course');
+            var list = document.getElementById('select_course_list');
             displaysame(school_inst, list);
         }
 
         function military(){
             var military_inst = document.getElementById('select_service').value;
-            var list = document.getElementById('military_course');
+            var list = document.getElementById('military_course_list');
             displaysame(military_inst, list);
         }
 
          function displaysame(inst, list){
-            console.log("starting function")
-            console.log(list);
             clearList(list);
-            console.log(list);
-            var course_codes = {{ data | js }};
-            console.log(course_codes);
+            var course_codes = {{ data.0 | js }};
+            var start_opt = document.createElement('option');
+            start_opt.text = "Select Course:"
+            list.add(start_opt);
             var i;
             for(i = 0; i < course_codes.length; i++){
                 if(course_codes[i][1] == inst){
-                    var opt = document.createElement('option');
-                    opt.text = course_codes[i][0];
-                    opt.value = course_codes[i][0];
-                    list.add(opt);
-                    console.log(opt)
-                }
-                else if(inst == 0){
-                    var opt = document.createElement('option');
-                    opt.text = "Select Course:"
-                    opt.value = inst
-                    list.add(opt);
-                    break;
+                    var new_opt = document.createElement('option');
+                    new_opt.text = course_codes[i][0];
+                    new_opt.value = course_codes[i][0];
+                    list.add(new_opt);
                 }
             }
          }

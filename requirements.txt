@@ -7,3 +7,6 @@ requests==2.22.0
 pytesseract==0.2.7
 pdf2image==1.6.0
 django-adminplus==0.5
+nltk>=3.4.4
+python-docx>=0.2.4
+
