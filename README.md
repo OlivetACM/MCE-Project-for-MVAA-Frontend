@@ -12,3 +12,7 @@ Frontend website for the Military Credit Equivalency project
   1. To build the container run `docker-compose build`
   **This only needs to be ran when you change `requirements.txt`, `compose/webserver/Dockerfile`, or `docker-compose.yml`
   2. To run the Django server run `docker-compose up`
+
+### To access the command line within docker:
+  1. docker ps -a //This lists the container processes. You'll need the container ID for our container.
+  2. docker exec -it <container id> /bin/bash //This is effectively a chroot (change root) operation.
