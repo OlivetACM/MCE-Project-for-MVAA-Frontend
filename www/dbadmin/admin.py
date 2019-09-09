@@ -47,7 +47,7 @@ def equivalency(request):
     context = dict(
         admin.site.each_context(request),
     )
-    return render(request, 'admin/equivalency')
+    return render(request, 'admin/equivalency.html')
 
 # register the view here instead of using a decorator, as we need login_required
 admin.site.register_view('equivalency', urlname='equivalency.html', name='Generate Equivalency Review', view=equivalency)
