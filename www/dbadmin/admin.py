@@ -1,6 +1,6 @@
 from django.contrib import admin
 from dbadmin.models import Course, Outcome, Reviewer, Institution
-
+from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.contrib import admin
 from django.http import HttpResponse
@@ -47,7 +47,7 @@ def equivalency(request):
     context = dict(
         admin.site.each_context(request),
     )
-    return render_to_response(request, 'mce/admin/equivalency.html', context)
+    return render(request, 'admin/equivalency')
 
 # register the view here instead of using a decorator, as we need login_required
-admin.site.register_view('equivalency', urlname='equivalency', name='Generate Equivalency Review', view=equivalency)
+admin.site.register_view('equivalency', urlname='equivalency.html', name='Generate Equivalency Review', view=equivalency)
