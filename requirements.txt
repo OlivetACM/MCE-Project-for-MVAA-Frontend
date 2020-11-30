@@ -1,4 +1,4 @@
-Django>=2.0,<3.0
+Django>=3.0
 Pdfminer.six>=20181108
 psycopg2>=2.7,<3.0
 xhtml2pdf>=0.2.3
