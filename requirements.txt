@@ -1,4 +1,4 @@
-Django>=3.0
+Django>=2.0,<3.0
 Pdfminer.six>=20181108
 psycopg2>=2.7,<3.0
 xhtml2pdf>=0.2.3
@@ -9,4 +9,5 @@ pdf2image==1.6.0
 django-adminplus==0.5
 nltk>=3.4.4
 python-docx>=0.2.4
+
 
